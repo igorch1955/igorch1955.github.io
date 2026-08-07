@@ -5,7 +5,23 @@
       "title": "Subjectivity Before Personal Identity: A Missing Foundation in the Debate on Transhumanism",
       "description": "Argues that the debate on mind uploading — including Ralph Weir's influential critique of transhumanism — presupposes that a digital system can be a subject, without establishing the conditions under which this holds. Submitted to Minds and Machines.",
       "links": [
-        { "label": "Zenodo · DOI 10.5281/zenodo.21762089", "url": "https://doi.org/10.5281/zenodo.21762089" }
+        { "label": "Zenodo \u00b7 DOI 10.5281/zenodo.21762089", "url": "https://doi.org/10.5281/zenodo.21762089" }
+      ]
+    },
+    {
+      "kicker": "Causa Sui · Academic excerpt, Part I",
+      "title": "Project Causa Sui: A Working Theory of Subjecthood",
+      "description": "Condensed academic version of Part I: genuine subjectivity arises from the irreversibility of a substrate's physical state, not from computational complexity — the foundational argument in compact form.",
+      "links": [
+        { "label": "Zenodo \u00b7 DOI 10.5281/zenodo.21460341", "url": "https://doi.org/10.5281/zenodo.21460341" }
+      ]
+    },
+    {
+      "kicker": "Causa Sui · Academic excerpt, Part II",
+      "title": "Project Causa Sui: A Foundation for Transhumanism",
+      "description": "Condensed academic version of Part II: transhumanism formulated a goal without a rigorous mechanism to reach it — this excerpt sets out the mechanism in compact form.",
+      "links": [
+        { "label": "Zenodo \u00b7 DOI 10.5281/zenodo.21641231", "url": "https://doi.org/10.5281/zenodo.21641231" }
       ]
     }
   ],
@@ -17,7 +33,7 @@
       "cover": "covers/thumb-causa-sui-part2.jpg",
       "links": [
         { "label": "Litres", "url": "https://www.litres.ru/book/igor-shahanov/proekt-causa-sui-bazis-transgumanizma-chast-ii-74242204/" },
-        { "label": "Zenodo \u00b7 DOI 10.5281/zenodo.21641231", "url": "https://doi.org/10.5281/zenodo.21641231" }
+        { "label": "Amazon KDP (ASIN B0H6M6G5VG)", "url": "https://www.amazon.com/dp/B0H6M6G5VG" }
       ]
     },
     {
@@ -27,8 +43,7 @@
       "cover": "covers/thumb-causa-sui-part1.jpg",
       "links": [
         { "label": "Litres", "url": "https://www.litres.ru/book/igor-shahanov/proekt-causa-sui-74198347/" },
-        { "label": "Amazon KDP (ASIN B0H6M6G5VG)", "url": "https://www.amazon.com/dp/B0H6M6G5VG" },
-        { "label": "Zenodo \u00b7 DOI 10.5281/zenodo.21460341", "url": "https://doi.org/10.5281/zenodo.21460341" }
+        { "label": "Amazon KDP (ASIN B0HBQB7JC4)", "url": "https://www.amazon.com/dp/B0HBQB7JC4" }
       ]
     }
   ]
