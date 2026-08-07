@@ -106,6 +106,9 @@
     padding:28px 0 28px 26px;
     border-left:1px solid var(--line);
     margin-bottom:4px;
+    display:flex;
+    gap:22px;
+    align-items:flex-start;
   }
   .work::before{
     content:'';
@@ -114,6 +117,20 @@
     background:var(--bg);
     border:1.5px solid var(--gold);
   }
+  .work-cover{
+    flex:0 0 auto;
+    width:64px;
+    border-radius:3px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 6px 18px rgba(0,0,0,.4);
+  }
+  .work-cover img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  .work-body{ flex:1 1 auto; min-width:0; }
   .work-kicker{
     font-family:'JetBrains Mono', monospace;
     font-size:.7rem;
@@ -140,6 +157,15 @@
     font-family:'JetBrains Mono', monospace;
     font-size:.8rem;
   }
+  .subsection-heading{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:1.05rem;
+    color:var(--ink-dim);
+    margin:0 0 18px 0;
+    padding-top:8px;
+  }
+  .subsection-heading:not(:first-child){ margin-top:48px; }
 
   /* ---------- CONTACT ---------- */
   .contact-grid{
@@ -168,6 +194,8 @@
   @media (max-width:560px){
     .contact-grid{ grid-template-columns:1fr; }
     section{ padding:60px 0; }
+    .work{ flex-direction:column; }
+    .work-cover{ width:88px; }
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -236,42 +264,74 @@
 
 <script>
 (function(){
+  function renderWork(w){
+    var div = document.createElement('div');
+    div.className = 'work';
+
+    if(w.cover){
+      var coverDiv = document.createElement('div');
+      coverDiv.className = 'work-cover';
+      var img = document.createElement('img');
+      img.src = w.cover;
+      img.alt = w.title + ' — cover';
+      img.loading = 'lazy';
+      coverDiv.appendChild(img);
+      div.appendChild(coverDiv);
+    }
+
+    var body = document.createElement('div');
+    body.className = 'work-body';
+
+    var kicker = document.createElement('div');
+    kicker.className = 'work-kicker';
+    kicker.textContent = w.kicker;
+    body.appendChild(kicker);
+
+    var h3 = document.createElement('h3');
+    h3.textContent = w.title;
+    body.appendChild(h3);
+
+    var p = document.createElement('p');
+    p.textContent = w.description;
+    body.appendChild(p);
+
+    var linksDiv = document.createElement('div');
+    linksDiv.className = 'work-links';
+    (w.links || []).forEach(function(l){
+      var a = document.createElement('a');
+      a.href = l.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = l.label;
+      linksDiv.appendChild(a);
+    });
+    body.appendChild(linksDiv);
+
+    div.appendChild(body);
+    return div;
+  }
+
   fetch('works.json')
     .then(function(r){ return r.json(); })
-    .then(function(works){
+    .then(function(data){
       var container = document.getElementById('worksList');
       container.innerHTML = '';
-      works.forEach(function(w){
-        var div = document.createElement('div');
-        div.className = 'work';
 
-        var kicker = document.createElement('div');
-        kicker.className = 'work-kicker';
-        kicker.textContent = w.kicker;
-        div.appendChild(kicker);
+      if(data.papers && data.papers.length){
+        var h = document.createElement('div');
+        h.className = 'subsection-heading';
+        h.textContent = 'Papers';
+        container.appendChild(h);
+        data.papers.forEach(function(w){ container.appendChild(renderWork(w)); });
+      }
 
-        var h3 = document.createElement('h3');
-        h3.textContent = w.title;
-        div.appendChild(h3);
-
-        var p = document.createElement('p');
-        p.textContent = w.description;
-        div.appendChild(p);
-
-        var linksDiv = document.createElement('div');
-        linksDiv.className = 'work-links';
-        (w.links || []).forEach(function(l){
-          var a = document.createElement('a');
-          a.href = l.url;
-          a.target = '_blank';
-          a.rel = 'noopener';
-          a.textContent = l.label;
-          linksDiv.appendChild(a);
-        });
-        div.appendChild(linksDiv);
-
-        container.appendChild(div);
-      });
+      if(data.books && data.books.length){
+        var h2 = document.createElement('div');
+        h2.className = 'subsection-heading';
+        h2.textContent = 'Books';
+        container.appendChild(h2);
+        data.books.forEach(function(w){ container.appendChild(renderWork(w)); });
+      }
     })
     .catch(function(err){
       document.getElementById('worksList').innerHTML =

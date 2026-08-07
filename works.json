@@ -1,28 +1,35 @@
-[
-  {
-    "kicker": "2026 · Preprint",
-    "title": "Subjectivity Before Personal Identity: A Missing Foundation in the Debate on Transhumanism",
-    "description": "Argues that the debate on mind uploading — including Ralph Weir's influential critique of transhumanism — presupposes that a digital system can be a subject, without establishing the conditions under which this holds. Submitted to Minds and Machines.",
-    "links": [
-      { "label": "Zenodo · DOI 10.5281/zenodo.21762089", "url": "https://doi.org/10.5281/zenodo.21762089" }
-    ]
-  },
-  {
-    "kicker": "Project Causa Sui · Part II",
-    "title": "A Foundation for Transhumanism",
-    "description": "The second part of the Causa Sui project: transhumanism formulated a goal — the expansion of the space of reachable states — but never a rigorous mechanism for reaching it. This part supplies one.",
-    "links": [
-      { "label": "Amazon KDP", "url": "https://www.amazon.com/dp/B0H6M6G5VG" },
-      { "label": "Zenodo · DOI 10.5281/zenodo.21641231", "url": "https://doi.org/10.5281/zenodo.21641231" }
-    ]
-  },
-  {
-    "kicker": "Project Causa Sui · Part I",
-    "title": "Project Causa Sui",
-    "description": "A working theory of subjecthood: genuine subjectivity — responsibility, fear, creativity — arises from the irreversibility of a substrate's state, not from computational complexity.",
-    "links": [
-      { "label": "Litres", "url": "https://www.litres.ru/book/igor-shahanov/proekt-causa-sui-74198347/" },
-      { "label": "Zenodo · DOI 10.5281/zenodo.21460341", "url": "https://doi.org/10.5281/zenodo.21460341" }
-    ]
-  }
-]
+{
+  "papers": [
+    {
+      "kicker": "2026 · Preprint",
+      "title": "Subjectivity Before Personal Identity: A Missing Foundation in the Debate on Transhumanism",
+      "description": "Argues that the debate on mind uploading — including Ralph Weir's influential critique of transhumanism — presupposes that a digital system can be a subject, without establishing the conditions under which this holds. Submitted to Minds and Machines.",
+      "links": [
+        { "label": "Zenodo · DOI 10.5281/zenodo.21762089", "url": "https://doi.org/10.5281/zenodo.21762089" }
+      ]
+    }
+  ],
+  "books": [
+    {
+      "kicker": "Project Causa Sui · Part II",
+      "title": "A Foundation for Transhumanism",
+      "description": "The second part of the Causa Sui project: transhumanism formulated a goal — the expansion of the space of reachable states — but never a rigorous mechanism for reaching it. This part supplies one.",
+      "cover": "covers/thumb-causa-sui-part2.jpg",
+      "links": [
+        { "label": "Litres", "url": "https://www.litres.ru/book/igor-shahanov/proekt-causa-sui-bazis-transgumanizma-chast-ii-74242204/" },
+        { "label": "Zenodo \u00b7 DOI 10.5281/zenodo.21641231", "url": "https://doi.org/10.5281/zenodo.21641231" }
+      ]
+    },
+    {
+      "kicker": "Project Causa Sui · Part I",
+      "title": "Project Causa Sui",
+      "description": "A working theory of subjecthood: genuine subjectivity — responsibility, fear, creativity — arises from the irreversibility of a substrate's state, not from computational complexity.",
+      "cover": "covers/thumb-causa-sui-part1.jpg",
+      "links": [
+        { "label": "Litres", "url": "https://www.litres.ru/book/igor-shahanov/proekt-causa-sui-74198347/" },
+        { "label": "Amazon KDP (ASIN B0H6M6G5VG)", "url": "https://www.amazon.com/dp/B0H6M6G5VG" },
+        { "label": "Zenodo \u00b7 DOI 10.5281/zenodo.21460341", "url": "https://doi.org/10.5281/zenodo.21460341" }
+      ]
+    }
+  ]
+}
