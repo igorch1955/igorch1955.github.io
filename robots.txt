@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://igorch1955.github.io/sitemap.xml
