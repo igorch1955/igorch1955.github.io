@@ -7,7 +7,7 @@
 <title id="pageTitle">Article — Igor Shakhanov</title>
 <meta name="description" id="pageDescription" content="">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
   :root{
     --bg: #0a0c10;
@@ -65,6 +65,18 @@
   #articleBody h2{ font-family:'Fraunces', serif; font-weight:500; font-size:1.5rem; margin:2em 0 .6em; }
   #articleBody h3{ font-family:'Fraunces', serif; font-weight:500; font-size:1.2rem; margin:1.8em 0 .5em; }
   #articleBody p{ margin:0 0 1.2em 0; color:var(--ink); }
+  #articleBody strong{ font-weight:700; }
+  /* A paragraph that is ONLY a bold phrase (e.g. "**Section Title**" on its own line)
+     is being used as an in-body subheading, not inline emphasis — style it accordingly. */
+  #articleBody p:has(> strong:only-child){
+    font-family:'JetBrains Mono', monospace;
+    font-size:.78rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:2.2em 0 1em 0;
+  }
+  #articleBody p:has(> strong:only-child) strong{ font-weight:500; }
   #articleBody ul, #articleBody ol{ color:var(--ink); padding-left:1.3em; margin:0 0 1.2em 0; }
   #articleBody li{ margin-bottom:.4em; }
   #articleBody blockquote{
