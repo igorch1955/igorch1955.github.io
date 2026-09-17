@@ -1,1 +1,11 @@
-
+{
+  "articles": [
+    {
+      "slug": "example-article",
+      "kicker": "2026 · Essay",
+      "title": "Example Article Title",
+      "date": "2026-09-17",
+      "body_markdown": "This is the full text of the article, written in **Markdown**.\n\n## A section heading\n\nParagraphs, headings, lists, links, and emphasis all work normally. Replace this placeholder entry with real content via the CMS, or delete it once you've added your own articles.\n\n- point one\n- point two\n\n> A blockquote, if needed."
+    }
+  ]
+}
