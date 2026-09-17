@@ -13,6 +13,7 @@
     --bg: #0a0c10;
     --ink: #e9e6dd;
     --ink-dim: #9aa0a8;
+    --ink-body: #c7c3ba;
     --gold: #c8a250;
     --line: #1c222b;
   }
@@ -61,11 +62,11 @@
     margin-bottom:48px;
   }
 
-  #articleBody{ font-size:1.05rem; color:var(--ink); border-top:1px solid var(--line); padding-top:36px; }
-  #articleBody h2{ font-family:'Fraunces', serif; font-weight:500; font-size:1.5rem; margin:2em 0 .6em; }
-  #articleBody h3{ font-family:'Fraunces', serif; font-weight:500; font-size:1.2rem; margin:1.8em 0 .5em; }
-  #articleBody p{ margin:0 0 1.2em 0; color:var(--ink); }
-  #articleBody strong{ font-weight:700; }
+  #articleBody{ font-size:1.05rem; color:var(--ink-body); border-top:1px solid var(--line); padding-top:36px; }
+  #articleBody h2{ font-family:'Fraunces', serif; font-weight:500; font-size:1.5rem; margin:2em 0 .6em; color:var(--ink); }
+  #articleBody h3{ font-family:'Fraunces', serif; font-weight:500; font-size:1.2rem; margin:1.8em 0 .5em; color:var(--ink); }
+  #articleBody p{ margin:0 0 1.2em 0; color:var(--ink-body); }
+  #articleBody strong{ font-weight:700; color:var(--ink); }
   /* A paragraph that is ONLY a bold phrase (e.g. "**Section Title**" on its own line)
      is being used as an in-body subheading, not inline emphasis — style it accordingly. */
   #articleBody p:has(> strong:only-child){
@@ -76,8 +77,8 @@
     color:var(--gold);
     margin:2.2em 0 1em 0;
   }
-  #articleBody p:has(> strong:only-child) strong{ font-weight:500; }
-  #articleBody ul, #articleBody ol{ color:var(--ink); padding-left:1.3em; margin:0 0 1.2em 0; }
+  #articleBody p:has(> strong:only-child) strong{ font-weight:500; color:var(--gold); }
+  #articleBody ul, #articleBody ol{ color:var(--ink-body); padding-left:1.3em; margin:0 0 1.2em 0; }
   #articleBody li{ margin-bottom:.4em; }
   #articleBody blockquote{
     margin:1.6em 0; padding:2px 0 2px 20px;
