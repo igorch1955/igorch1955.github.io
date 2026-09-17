@@ -35,3 +35,18 @@ collections:
                   { label: "URL", name: "url", widget: "string" }
                 ]}
             ]}
+
+  - name: "articles"
+    label: "Articles (full text, not listed on homepage)"
+    files:
+      - file: "articles/articles.json"
+        label: "Articles data"
+        name: "articles"
+        fields:
+          - { label: "Articles", name: "articles", widget: "list", fields: [
+              { label: "Slug (used in the URL: article.html?slug=...)", name: "slug", widget: "string", hint: "lowercase, no spaces, e.g. my-article-title" },
+              { label: "Kicker", name: "kicker", widget: "string", required: false },
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Date", name: "date", widget: "string", required: false, hint: "e.g. 2026-09-17" },
+              { label: "Body", name: "body_markdown", widget: "markdown" }
+            ]}
