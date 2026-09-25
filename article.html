@@ -2,135 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title id="pageTitle">Article — Igor Shakhanov</title>
-<meta name="description" id="pageDescription" content="">
-<link rel="stylesheet" href="style.css">
-<style>
-  /* Page-specific styles only — shared variables, base elements, .wrap and
-     .eyebrow live in style.css, so this page automatically matches the
-     homepage's colors, fonts and base spacing. */
-
-  /* Article body reads more comfortably in a slightly narrower column
-     than the homepage's .wrap — intentional, not a mismatch. */
-  .wrap{ max-width:720px; padding:64px 28px 100px; }
-
-  .back-link{
-    font-family:'JetBrains Mono', monospace;
-    font-size:.78rem;
-    color:var(--ink-dim);
-    display:inline-block;
-    margin-bottom:40px;
-  }
-  .back-link:hover{ color:var(--gold); }
-
-  h1{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size:clamp(1.9rem, 4.4vw, 2.7rem);
-    line-height:1.15;
-    letter-spacing:-.01em;
-    margin:0 0 14px 0;
-  }
-  .date{
-    font-family:'JetBrains Mono', monospace;
-    font-size:.78rem;
-    color:var(--ink-dim);
-    margin-bottom:48px;
-  }
-
-  #articleBody{ font-size:.95rem; color:var(--ink-body); border-top:1px solid var(--line); padding-top:36px; }
-  #articleBody h2{ font-family:'Fraunces', serif; font-weight:500; font-size:1.5rem; margin:2em 0 .6em; color:var(--ink); }
-  #articleBody h3{ font-family:'Fraunces', serif; font-weight:500; font-size:1.2rem; margin:1.8em 0 .5em; color:var(--ink); }
-  #articleBody p{ margin:0 0 1.2em 0; color:var(--ink-body); }
-  /* Inline emphasis matches the homepage's convention (.about strong):
-     weight 500 + brighter ink color, not a heavy 700 weight. */
-  #articleBody strong{ font-weight:500; color:var(--ink); }
-  /* A paragraph that is ONLY a bold phrase (e.g. "**Section Title**" on its own line)
-     is being used as an in-body subheading, not inline emphasis — style it
-     like the homepage's .work-kicker instead of relying on font-weight. */
-  #articleBody p:has(> strong:only-child){
-    font-family:'JetBrains Mono', monospace;
-    font-size:.78rem;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    color:var(--gold);
-    margin:2.2em 0 1em 0;
-  }
-  #articleBody p:has(> strong:only-child) strong{ font-weight:500; color:var(--gold); }
-  #articleBody ul, #articleBody ol{ color:var(--ink-body); padding-left:1.3em; margin:0 0 1.2em 0; }
-  #articleBody li{ margin-bottom:.4em; }
-  #articleBody blockquote{
-    margin:1.6em 0; padding:2px 0 2px 20px;
-    border-left:2px solid var(--gold);
-    color:var(--ink-dim);
-    font-style:italic;
-  }
-  #articleBody code{ font-family:'JetBrains Mono', monospace; font-size:.9em; background:#141922; padding:.15em .4em; border-radius:3px; }
-  #articleBody pre{ background:#0f1319; border:1px solid var(--line); border-radius:6px; padding:16px; overflow-x:auto; }
-  #articleBody pre code{ background:none; padding:0; }
-  #articleBody img{ max-width:100%; border-radius:4px; }
-  #articleBody hr{ border:none; border-top:1px solid var(--line); margin:2.4em 0; }
-</style>
+<title>Redirecting… — Igor Shakhanov</title>
+<script>
+  /* Old article address (article.html?slug=...) — articles now live at
+     /articles/<slug>/ as real pages. Forward old links there. */
+  (function(){
+    var slug = new URLSearchParams(window.location.search).get('slug');
+    window.location.replace(slug ? '/articles/' + encodeURIComponent(slug) + '/' : '/');
+  })();
+</script>
 </head>
 <body>
-
-<div class="wrap">
-  <a class="back-link" href="/">← igorch1955.github.io</a>
-  <div id="articleHead"><p class="status-msg">Loading…</p></div>
-  <div id="articleBody"></div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
-<script>
-(function(){
-  function showError(msg){
-    document.getElementById('articleHead').innerHTML = '<p class="status-msg">' + msg + '</p>';
-  }
-
-  var params = new URLSearchParams(window.location.search);
-  var slug = params.get('slug');
-
-  if(!slug){
-    showError('No article specified.');
-    return;
-  }
-
-  fetch('articles/articles.json')
-    .then(function(r){ return r.json(); })
-    .then(function(data){
-      var article = (data.articles || []).find(function(a){ return a.slug === slug; });
-      if(!article){
-        showError('Article not found.');
-        return;
-      }
-
-      document.title = article.title + ' — Igor Shakhanov';
-      var descMeta = document.getElementById('pageDescription');
-      if(descMeta && article.body_markdown){
-        descMeta.setAttribute('content', article.body_markdown.replace(/[#*>`\-\n]/g,' ').slice(0,160));
-      }
-
-      var headHtml = '';
-      if(article.kicker) headHtml += '<div class="eyebrow">' + article.kicker + '</div>';
-      headHtml += '<h1>' + article.title + '</h1>';
-      if(article.date) headHtml += '<div class="date">' + article.date + '</div>';
-      document.getElementById('articleHead').innerHTML = headHtml;
-
-      var bodyEl = document.getElementById('articleBody');
-      if(window.marked){
-        bodyEl.innerHTML = marked.parse(article.body_markdown || '');
-      } else {
-        // Fallback if the CDN script failed to load
-        bodyEl.textContent = article.body_markdown || '';
-      }
-    })
-    .catch(function(err){
-      showError('Could not load this article.');
-      console.error('article load error:', err);
-    });
-})();
-</script>
-
+<p>This page has moved. <a href="/">Go to the homepage</a>.</p>
 </body>
 </html>

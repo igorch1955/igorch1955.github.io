@@ -1,0 +1,54 @@
+/* Shared design system for igorch1955.github.io.
+   index.html and article.html both link to this file — change a value
+   here once, and it updates everywhere. Each page keeps only the CSS
+   that is genuinely specific to that page in its own <style> block. */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root{
+  --bg: #0a0c10;
+  --bg-panel: #0f1319;
+  --ink: #e9e6dd;
+  --ink-dim: #9aa0a8;
+  --ink-body: #b7bcc3;
+  --gold: #c8a250;
+  --gold-dim: #7a6636;
+  --line: #1c222b;
+  --teal: #3d6b73;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter', sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+::selection{ background:var(--gold-dim); color:var(--ink); }
+
+a{ color:var(--gold); text-decoration:none; border-bottom:1px solid transparent; transition:border-color .2s; }
+a:hover{ border-bottom-color:var(--gold); }
+a:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+
+.wrap{ max-width:760px; margin:0 auto; padding:0 28px; }
+
+/* Small uppercase mono label used as a page-level marker — the site name
+   eyebrow on the homepage, and the kicker above an article title. */
+.eyebrow{
+  font-family:'JetBrains Mono', monospace;
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:22px;
+}
+
+.status-msg{ color:var(--ink-dim); font-family:'JetBrains Mono', monospace; font-size:.85rem; }
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+}

@@ -1,0 +1,21 @@
+{%- assign w = include.work -%}
+<div class="work">
+  {%- if w.cover %}
+  <div class="work-cover"><img src="{{ w.cover | relative_url }}" alt="{{ w.title | escape }} — cover" loading="lazy"></div>
+  {%- endif %}
+  <div class="work-body">
+    <div class="work-kicker">{{ w.kicker | escape }}</div>
+    <h3>{{ w.title | escape }}</h3>
+    <p>{{ w.description | escape }}</p>
+    <div class="work-links">
+      {%- for l in w.links %}
+      {%- assign first = l.url | slice: 0 %}
+      {%- if first == "/" or l.url contains "igorch1955.github.io" %}
+      <a href="{{ l.url }}">{{ l.label | escape }}</a>
+      {%- else %}
+      <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label | escape }}</a>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+  </div>
+</div>
