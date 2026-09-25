@@ -12,7 +12,7 @@ collections:
   - name: "papers"
     label: "Papers"
     files:
-      - file: "works.json"
+      - file: "_data/works.json"
         label: "Publications data"
         name: "works"
         fields:
@@ -37,16 +37,19 @@ collections:
             ]}
 
   - name: "articles"
-    label: "Articles (full text, not listed on homepage)"
-    files:
-      - file: "articles/articles.json"
-        label: "Articles data"
-        name: "articles"
-        fields:
-          - { label: "Articles", name: "articles", widget: "list", fields: [
-              { label: "Slug (used in the URL: article.html?slug=...)", name: "slug", widget: "string", hint: "lowercase, no spaces, e.g. my-article-title" },
-              { label: "Kicker", name: "kicker", widget: "string", required: false },
-              { label: "Title", name: "title", widget: "string" },
-              { label: "Date", name: "date", widget: "string", required: false, hint: "e.g. 2026-09-17" },
-              { label: "Body", name: "body_markdown", widget: "markdown" }
-            ]}
+    label: "Articles"
+    label_singular: "Article"
+    folder: "_articles"          # one Markdown file per article
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{fields.slug}}"      # file name = web address: /articles/<slug>/
+    summary: "{{date}} · {{title}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Slug (web address: /articles/<slug>/)", name: "slug", widget: "string", pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "lowercase letters, digits and dashes only"], hint: "e.g. my-article-title. Do not change after publishing — the address would change." }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Kicker", name: "kicker", widget: "string", required: false, hint: "Small line above the title" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Description (for Google, ~160 characters)", name: "description", widget: "text", required: false, hint: "Shown in search results. If empty, the first lines of the text are used." }
+      - { label: "Body", name: "body", widget: "markdown" }

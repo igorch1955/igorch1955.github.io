@@ -1,0 +1,36 @@
+# Jekyll configuration for igorch1955.github.io
+# GitHub Pages builds the site from these sources automatically on every push.
+
+title: Igor Shakhanov
+url: https://igorch1955.github.io
+baseurl: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-sitemap   # generates /sitemap.xml automatically
+
+# Each file in _articles/ becomes its own static page at /articles/<file-name>/
+collections:
+  articles:
+    output: true
+    permalink: /articles/:name/
+
+defaults:
+  - scope: { path: "", type: articles }
+    values: { layout: article }
+  # Keep service pages out of the sitemap
+  - scope: { path: "admin" }
+    values: { sitemap: false }
+  - scope: { path: "article.html" }
+    values: { sitemap: false }
+  - scope: { path: "google433f42cac43fed9c.html" }
+    values: { sitemap: false }
+
+# Netlify OAuth helper files are not part of the public site
+exclude:
+  - netlify
+  - netlify.toml
+  - README.md
