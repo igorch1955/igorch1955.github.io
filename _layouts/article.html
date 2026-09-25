@@ -61,7 +61,7 @@
   .article-body p{ margin:0 0 1.2em 0; color:var(--ink-body); }
   .article-body strong{ font-weight:500; color:var(--ink); }
   /* A paragraph that is ONLY a bold phrase is an in-body subheading */
-  .article-body p:has(> strong:only-child){
+  .article-body p:has(> strong:only-child):not(:has(em)){
     font-family:'JetBrains Mono', monospace;
     font-size:.78rem;
     letter-spacing:.1em;
@@ -69,7 +69,7 @@
     color:var(--gold);
     margin:2.2em 0 1em 0;
   }
-  .article-body p:has(> strong:only-child) strong{ font-weight:500; color:var(--gold); }
+  .article-body p:has(> strong:only-child):not(:has(em)) strong{ font-weight:500; color:var(--gold); }
   .article-body ul, .article-body ol{ color:var(--ink-body); padding-left:1.3em; margin:0 0 1.2em 0; }
   .article-body li{ margin-bottom:.4em; }
   .article-body blockquote{
