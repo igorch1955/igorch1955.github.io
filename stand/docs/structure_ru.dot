@@ -1,0 +1,19 @@
+digraph G {
+  rankdir=TB; bgcolor="white"; nodesep=0.5; ranksep=0.55;
+  node [shape=box, style="rounded,filled", fillcolor="#f3f4f2", color="#6b6a64", fontname="DejaVu Sans", fontsize=11, width=2.6];
+  edge [color="#6b6a64", fontname="DejaVu Sans", fontsize=9];
+  world [label="Условный мир и тело индивида\nохота, сон, трудные времена,\nгрибы, дерево, вода, сосед", fillcolor="#e8f0fb"];
+  subgraph cluster_ind { label="Индивид"; fontname="DejaVu Sans"; fontsize=11; color="#1baf7a"; style="rounded"; margin=12;
+    graphs [label="Графы с матрицами\n(память опыта)"];
+    birth  [label="Способность рождать новое\n(рождение графа в агонии)"];
+    {rank=same; graphs; birth}
+  }
+  exec [label="Исполнитель (мышцы)\nсумма усилий + постоянный шум"];
+  noise [label="Аппаратный шум:\nв мире, в исполнителе,\nв рождении нового", shape=note, fillcolor="white", fontsize=9, width=1.8];
+  world -> graphs [label=" тело, главное событие,\n положение выбора"];
+  world -> birth  [label=" то же"];
+  graphs -> exec  [label=" усилия"];
+  birth -> world  [label=" просьба:\n родить граф", style=dashed, constraint=false];
+  exec -> world   [label=" сдвиг выбора\n (следующий такт)", constraint=false];
+  {rank=same; exec; noise}
+}

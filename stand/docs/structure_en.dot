@@ -1,0 +1,19 @@
+digraph G {
+  rankdir=TB; bgcolor="white"; nodesep=0.5; ranksep=0.55;
+  node [shape=box, style="rounded,filled", fillcolor="#f3f4f2", color="#6b6a64", fontname="DejaVu Sans", fontsize=11, width=2.6];
+  edge [color="#6b6a64", fontname="DejaVu Sans", fontsize=9];
+  world [label="Simulated world and the individual's body\nhunting, sleep, hard times,\nmushrooms, tree, water, neighbour", fillcolor="#e8f0fb"];
+  subgraph cluster_ind { label="Individual"; fontname="DejaVu Sans"; fontsize=11; color="#1baf7a"; style="rounded"; margin=12;
+    graphs [label="Graphs with matrices\n(memory of experience)"];
+    birth  [label="Capacity to give rise to the new\n(birth of a graph in agony)"];
+    {rank=same; graphs; birth}
+  }
+  exec [label="Executor (muscles)\nsum of pushes + permanent noise"];
+  noise [label="Hardware noise:\nin the world, the executor,\nthe birth of the new", shape=note, fillcolor="white", fontsize=9, width=1.8];
+  world -> graphs [label=" body, main event,\n position of choice"];
+  world -> birth  [label=" the same"];
+  graphs -> exec  [label=" pushes"];
+  birth -> world  [label=" request: give\n birth to a graph", style=dashed, constraint=false];
+  exec -> world   [label=" shift of choice\n (next tick)", constraint=false];
+  {rank=same; exec; noise}
+}
