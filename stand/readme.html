@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Causa Sui: the simulated world of chapter 32</title>
+<style>body{font-family:Georgia,serif;max-width:46rem;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#1f1f1e;background:#fcfcfb}
+h1{font-size:1.5rem}h2{font-size:1.15rem;margin-top:2rem}code{background:#f0f0ec;padding:0 .25em}li{margin:.2em 0}table{border-collapse:collapse;font-size:.9em}td,th{border:1px solid #ccc;padding:.3em .5em;vertical-align:top}pre{background:#f0f0ec;padding:.6em;overflow-x:auto}img{max-width:100%}</style></head>
+<body>
+<p><a href="index.html">← back to the simulated world page</a></p>
+<h1>Causa Sui: the simulated world of chapter 32</h1>
+<p>This program lives the life of an individual in a simulated world, to test whether the
+mechanisms described in <em>Causa Sui</em> (graphs, matrices, the capacity to give rise to the
+new in agony) are consistent and what they change. It is the frozen reference version
+used for every number and figure of chapter 32 of book 3. It is a model of the mechanisms,
+not a subject (see chapter 31). A plain-language description of the algorithm is in
+<code>docs/ALGORITHM_EN.md</code> (Russian: <code>docs/АЛГОРИТМ_RU.md</code>).</p>
+<h2>Requirements</h2>
+<p>Python 3.11 or newer (tested with 3.13), numpy (tested 2.5), matplotlib (3.11, figures only),
+scipy (1.18, optional: the Wilcoxon test). Graphviz <code>dot</code> only to redraw figure 32.0a.</p>
+<pre><code>pip install numpy matplotlib scipy
+</code></pre>
+<h2>Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>world.py</code></td>
+<td>the simulated world and the individual's body; the world passport (<code>WorldParams</code>)</td>
+</tr>
+<tr>
+<td><code>individual.py</code></td>
+<td>graphs with memory, graphs without memory (comparison), birth of a graph in agony, executor</td>
+</tr>
+<tr>
+<td><code>main.py</code></td>
+<td>the main loop: one life, one tick = one hour</td>
+</tr>
+<tr>
+<td><code>signals.py</code>, <code>noise.py</code></td>
+<td>what passes between the parts; hardware noise source</td>
+</tr>
+<tr>
+<td><code>tests.py</code></td>
+<td>18 control cases with a known answer</td>
+</tr>
+<tr>
+<td><code>experiments/</code></td>
+<td>the experiments and figures of chapter 32</td>
+</tr>
+<tr>
+<td><code>data/</code></td>
+<td>the published series (lives of the individuals behind table 32.1 and figure 32.1)</td>
+</tr>
+<tr>
+<td><code>docs/</code></td>
+<td>the algorithm in plain words (EN, RU); sources of figures 32.0a, 32.0b</td>
+</tr>
+<tr>
+<td><code>figures/</code></td>
+<td>figures 32.0a-32.3, Russian and English, sized for an A5 page</td>
+</tr>
+</tbody>
+</table>
+<h2>Check the program</h2>
+<pre><code>python3 tests.py                  # 18 of 18 must pass
+python3 main.py                   # one life; journal in journal.txt
+</code></pre>
+<h2>Reproduce chapter 32 (run inside experiments/)</h2>
+<p>Every life uses fresh hardware noise, so numbers vary between series (about ±10 %);
+the qualitative results do not.</p>
+<table>
+<thead>
+<tr>
+<th>Chapter 32</th>
+<th>Command</th>
+<th>Published values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Survival in the first-fourth hard times (table, fig. 32.1)</td>
+<td><code>python3 hard_times.py memory 100</code>; <code>... nomemory 100</code>; <code>... nobirth 100</code> (the published series of 200 are two runs of 100 merged)</td>
+<td>finds its own and remembers (200): 60 / 86 / 88 / 88 %, lived out the full lifespan 52 of 200; does not remember (200): 29-38 / 0 %; only observation (100): 47 / 38 / 0 %</td>
+</tr>
+<tr>
+<td>Figure 32.1</td>
+<td><code>python3 figures.py survival ru</code> / <code>en</code> (reads <code>../data</code>, or your own <code>hard_times_*.json</code>)</td>
+<td></td>
+</tr>
+<tr>
+<td>World calibration</td>
+<td><code>python3 birth_in_agony.py c1_good 100</code>; <code>c2_hard</code>; <code>c3_oracle</code></td>
+<td>good times 100/100 live to old age; hard times with nothing new 0/100 survive the first; oracle 77/100 survive the first, 37/100 live to old age</td>
+</tr>
+<tr>
+<td>Birth in agony, stress</td>
+<td><code>python3 birth_in_agony.py full 100</code>; <code>insight</code>; <code>adrenaline</code>; <code>nostress</code>; <code>nobirth</code></td>
+<td>survived first / lived out the lifespan: 59/20, 61/22, 56/14, 57/8, 48/0</td>
+</tr>
+<tr>
+<td>Experience or selection</td>
+<td><code>python3 experience_vs_selection.py 90</code></td>
+<td>peak hunger, same individuals: first 0.74, second 0.25 (medians), lower in 24 of 33, Wilcoxon p ~ 7e-5</td>
+</tr>
+<tr>
+<td>Figures 32.0a, 32.0b</td>
+<td><code>cd ../docs; dot -Tpng -Gdpi=300 structure_en.dot -o fig32_0a_structure_en.png</code>; <code>python3 simplex_fig.py en</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Figures 32.2, 32.3 (illustrations)</td>
+<td><code>python3 figures.py life ru</code>; <code>python3 figures.py lostlife ru</code> (then <code>en</code>: the same life is reused)</td>
+<td>chosen from several lives</td>
+</tr>
+</tbody>
+</table>
+<p>The figure scripts save their PNG files in the current folder; move them to <code>figures/</code> to replace the published ones.</p>
+<p>Percentages for each hard-time period are of the individuals <strong>alive at its start</strong>,
+not of the initial hundred (e.g. 86 % in the second hard times is 79 of 92).</p>
+<h2>Randomness</h2>
+<p>Noise comes from the operating system's hardware entropy (<code>os.urandom</code>). A whole life
+cannot be repeated exactly; a single part can be: record its noise stream
+(<code>NoiseSource("hw", record=True)</code>) and replay it (<code>NoiseSource("replay", replay=...)</code>).</p>
+<h2>Integrity</h2>
+<p><code>SHA256SUMS</code> lists the checksum of every file: <code>sha256sum -c SHA256SUMS</code>.</p>
+<h2>Provenance</h2>
+<p>Frozen reference version "3k" (world v6, graphs v6), 3-4 October 2026. This English
+edition was checked against the original: with the same recorded noise streams the two
+programs produce bit-identical lives.</p>
+</body></html>

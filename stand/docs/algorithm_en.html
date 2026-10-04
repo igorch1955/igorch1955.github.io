@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appendix. How the program of the simulated world works</title>
+<style>body{font-family:Georgia,serif;max-width:46rem;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#1f1f1e;background:#fcfcfb}
+h1{font-size:1.5rem}h2{font-size:1.15rem;margin-top:2rem}code{background:#f0f0ec;padding:0 .25em}li{margin:.2em 0}table{border-collapse:collapse;font-size:.9em}td,th{border:1px solid #ccc;padding:.3em .5em;vertical-align:top}pre{background:#f0f0ec;padding:.6em;overflow-x:auto}img{max-width:100%}</style></head>
+<body>
+<p><a href="../index.html">← back to the simulated world page</a></p>
+<h1>Appendix. How the program of the simulated world works</h1>
+<p>The program lives one life of one individual in a simulated world: up to 400 days, with a time step (tick) of one hour. The experiment of chapter 32 is hundreds of such lives, lived one after another. The program code is published on the author's website; this appendix describes what it does, without code.</p>
+<h2>1. What the program consists of</h2>
+<p>A diagram of the parts of the program and what they pass to each other is in chapter 32, section "How the simulated world and its inhabitant are built".</p>
+<ul>
+<li><strong>The simulated world and the individual's body.</strong> The world knows its own rules: how much hunting yields, when hard times come, how dangerous a tree is. The body is hunger, fatigue and stored food. The individual does not know these rules; it sees only its body, what happened during the hour, and where its choice is now.</li>
+<li><strong>The individual</strong>, two parts working at the same time:<ul>
+<li><strong>graphs with matrices</strong>, the memory of experience: what to do and what to expect from it;</li>
+<li><strong>the capacity to give rise to the new</strong>: in agony a new graph is born.</li>
+</ul>
+</li>
+<li><strong>The executor</strong>, the "muscles". It adds up the pushes of all graphs, gives them the strength of the body and adds permanent noise.</li>
+<li><strong>The noise source</strong>: hardware randomness of the computer itself.</li>
+<li><strong>The journal of a life</strong>: events written down in plain words.</li>
+</ul>
+<p>The parts never call one another. Every hour they receive the same picture and return their answers; whatever arrives first is added first.</p>
+<h2>2. One hour of life</h2>
+<ol>
+<li><strong>The world takes a step.</strong> Hunger grows. The pull toward the Hunger vertex grows with hunger. The choice moves under the push the individual made in the previous hour; the push is weakened by fatigue and by the difficulty of the way, and strengthened by a surge of strength. Fatigue grows or is relieved; the individual falls asleep or wakes up. If the choice touches the vertex of a way, there is a catch (or death, if the way is dangerous). Eating from the store, spoilage, mushrooms growing back. Sometimes a meeting with the neighbour. Old age. Death by starvation.</li>
+<li><strong>The main event of the hour is chosen</strong> by importance: death, catch, drinking, something seen at the neighbour's, collapsing into sleep, eating from the store, waking up, spoilage.</li>
+<li><strong>The individual thinks.</strong> The graphs and the capacity to give rise to the new receive the same picture at the same time: the body, the main event, the position of choice, its own graphs and their successes.</li>
+<li><strong>Birth of a new graph</strong>, if the individual is in agony: the world offers one of the ways not yet tried; chance decides which.</li>
+<li><strong>The executor</strong> adds the pushes, gives them the body's strength and adds noise: this is the push of the next hour.</li>
+<li><strong>Checks and the journal.</strong> The program checks that the choice stays within its bounds and the body within its limits, and writes down the events.</li>
+</ol>
+<h2>3. How the individual is built</h2>
+<h3>The choice</h3>
+<p>The figure "the individual's choice as a ball in a triangle" is in chapter 32, same section.</p>
+<p>The choice is a point (a ball) in a triangle with the vertices <strong>Hunger</strong>, <strong>Hunting</strong>, <strong>Sleep</strong>. The ball moves smoothly, while acts and states are discrete: touching Hunting is a catch; touching Hunger is death; coming close to Sleep is falling asleep. Each born graph (mushrooms, tree, water) adds a new vertex.</p>
+<h3>Graphs and matrices</h3>
+<p>A <strong>graph</strong> is what states and transitions a business has (hunting, sleep, tree...). A <strong>matrix</strong> is what is known about each state. In the program a graph's matrix holds its <strong>expectation</strong>: how much relief one hour of effort brings. The matrix of graph "mushrooms" also holds entries: "mushroom A is safe to eat", "mushroom B is dangerous".</p>
+<h3>Innate (the experience of generations)</h3>
+<ul>
+<li><strong>A drive for food.</strong> Slightly hungry: an almost full pull; just fed: a weak one. Stored food does not quench it (a wolf in a sheepfold).</li>
+<li><strong>The expectation from hunting</strong>: as much as hunting yields in good times. The individual is a hunter: its memory of hunting never falls below 45 % of the innate value.</li>
+<li><strong>Sleep.</strong> Pulls by fatigue, and more if the individual has not slept for long.</li>
+</ul>
+<h3>How a way is chosen</h3>
+<p>The drive for food goes to <strong>one</strong> way at a time. Hunting is always open. Other ways open as hunting "is not working", that is, as its expectation falls below the innate one. Ways compete by their expectations. A business already begun holds on: while an attempt is under way, its pull is stronger the closer the ball is to its goal. A new decision (after sleep or after a catch) is made by expectations alone. All pushes (food, sleep) are added without an arbiter.</p>
+<h3>Six ways to learn (there are no others in the program)</h3>
+<ol>
+<li><strong>The expectation of a way</strong> is updated by hours of effort: a catch gives relief 1, water 1/6, nothing 0. Hours of sleep do not count.</li>
+<li><strong>The length of memory.</strong> While experience is small, each hour changes the expectation noticeably; with experience, less. But memory is not longer than about three days of effort: a week of complete failure undermines faith in a way.</li>
+<li><strong>Return to hunting.</strong> While the individual does not hunt, its expectation from hunting returns by itself to the innate value, in about a week. When hard times end, the individual tries hunting again and, if it feeds, returns to it.</li>
+<li><strong>Birth of a new graph</strong>, for two reasons: <strong>agony</strong> (at the edge of starvation, see below) and <strong>novelty</strong> (it saw a neighbour with mushrooms and has no graph "mushrooms" yet). A newborn graph inherits the innate expectation of hunting with a small random deviation.</li>
+<li><strong>Entries in the matrix of graph "mushrooms".</strong> Saw a neighbour poisoned by mushroom B: "B is dangerous"; saw a neighbour eat mushroom A and be fine: "A is safe". Ate one itself and survived: "this one is safe" (a false lesson is possible: surviving after B).</li>
+<li><strong>Skill.</strong> Each success on a risky way lowers its danger for this individual.</li>
+</ol>
+<h3>Birth of a new graph in agony</h3>
+<p>While life is bearable there are no new ideas. A new graph is born only at the edge: the ball is close to Hunger (a threshold with noise), the body is hungry, nothing has been eaten for long, and neither old hunting nor a way that has worked before has helped. At the moment of birth comes <strong>insight</strong>: the ball at once finds itself close to the new vertex, and the new way is tried immediately. Closeness to Hunger brings a <strong>surge of strength</strong> (adrenaline): the push is stronger, but fatigue grows faster; the surge fades slowly, in about a day.</p>
+<p>If the individual lacks the capacity to give rise to the new (for comparison), it can get a new graph only by novelty, by learning from the neighbour.</p>
+<h3>An individual without memory (for comparison)</h3>
+<p>The same body and the same capacity to give rise to the new, but its graphs remember nothing: a fixed rule "old hunting -&gt; a way that has worked before -&gt; a new graph".</p>
+<h2>4. How the world is built</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>What it is</th>
+<th>Numbers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time</td>
+<td>tick = hour, day = 24 ticks</td>
+<td>lifespan limit 400 days</td>
+</tr>
+<tr>
+<td>Hunger</td>
+<td>grows by itself, falls only with food</td>
+<td>without food the body lasts ~20 days</td>
+</tr>
+<tr>
+<td>Hunting</td>
+<td>the main way; a catch is 3 portions: one eaten at once, two stored</td>
+<td>stored food spoils in ~10 days</td>
+</tr>
+<tr>
+<td>Sleep</td>
+<td>falls asleep when close to the Sleep vertex; a sleeping body does not move</td>
+<td>no longer than 3 days awake, then sleep comes by force; sleep ~6 h (longer after sleeplessness, shorter on an empty stomach)</td>
+</tr>
+<tr>
+<td>Hard times</td>
+<td>hunting is 5 times harder</td>
+<td>~30 days once in ~100 days, 4 times in a life</td>
+</tr>
+<tr>
+<td>Tree</td>
+<td>feeds even in hard times</td>
+<td>risk of falling 15 % per catch, less with skill</td>
+</tr>
+<tr>
+<td>Water</td>
+<td>does not feed; the body lives on its own reserves (loses weight)</td>
+<td>each drink is ~2 days of life; risk of drowning 20 %, less with skill</td>
+</tr>
+<tr>
+<td>Mushrooms</td>
+<td>feed; good (A) and poisonous (B); mushrooms are scarce</td>
+<td>a patch holds 2 meals, one grows back in ~3 weeks; mushroom B kills in 80 % of cases</td>
+</tr>
+<tr>
+<td>Neighbour</td>
+<td>a random meeting instead of a herd</td>
+<td>about once in 15 days: sees the neighbour eat mushrooms, get poisoned, fall, drown, starve</td>
+</tr>
+</tbody>
+</table>
+<p>Which way the world offers at the birth of a new graph is decided by chance. Only the world knows the properties of the ways.</p>
+<h2>5. What is set in advance</h2>
+<p><strong>Calibration by the Agent</strong>: quantities that in the living are set by the experience of generations and in the program are set by its author:</p>
+<ul>
+<li>the edge of agony: closeness to Hunger 0.4 (the program works within 0.35-0.45); body hunger above 0.4; no food for more than 60 h (and 120 h more if a way has worked before); at least 200 h between births;</li>
+<li>insight: the ball is moved 60 % of the way to the new vertex;</li>
+<li>surge of strength: starts at closeness to Hunger 0.3; the push up to twice as strong; fades in ~a day;</li>
+<li>the innate expectation of hunting; memory of hunting not below 45 %; memory horizon ~3 days; return of hunting ~a week; commitment to the business at hand;</li>
+<li>sleep: "not slept for long" is more than 36 h.</li>
+</ul>
+<p><strong>The world</strong> (section 4) is also set in advance and is the same in all experiments.</p>
+<p><strong>Randomness.</strong> The noise source is hardware randomness of the computer itself; every value is new, so two lives never repeat exactly. Noise is not a reaction to a tie between options but a permanent part of the program: in the executor (every hour), at the edge of agony, in which way is offered at a birth, in the expectation inherited by a newborn graph, in the length of sleep, in the risk of ways, in which mushroom is picked, in meetings with the neighbour. To debug a single part, the noise stream can be recorded and replayed; the result then matches bit for bit.</p>
+<h2>6. How to repeat</h2>
+<p>The code and instructions are on the author's website (a link to download). Each table and figure of chapter 32 comes from one command; the expected numbers match the book within the random spread between series (about ±10 %).</p>
+</body></html>
