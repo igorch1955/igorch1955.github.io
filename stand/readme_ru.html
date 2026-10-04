@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Causa Sui: условный мир главы 32 — Igor Shakhanov</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="stand.css">
+</head>
+<body>
+<article class="wrap">
+  <a class="back-link" href="index.html">← на страницу условного мира</a>
+  <header>
+    <div class="eyebrow">Causa Sui · Книга 3 · Код</div>
+    <h1>Causa Sui: условный мир главы 32</h1>
+  </header>
+  <div class="article-body">
+<p>Программа проживает жизнь индивида в условном мире и проверяет, непротиворечивы ли
+механизмы, описанные в <em>Causa Sui</em> (графы, матрицы, способность рождать новое в агонии),
+и что они меняют. Это замороженная эталонная версия: на ней получены все числа и рисунки
+главы 32 книги 3. Это модель механизмов, а не субъект (см. главу 31). Описание алгоритма
+простыми словами — <code>docs/АЛГОРИТМ_RU.md</code> (английский: <code>docs/ALGORITHM_EN.md</code>).
+Код и комментарии в нём — на английском.</p>
+<h2>Что нужно</h2>
+<p>Python 3.11 или новее (проверено на 3.13), numpy (проверено 2.5), matplotlib (3.11, только для рисунков),
+scipy (1.18, по желанию: критерий Уилкоксона). Graphviz <code>dot</code> — только чтобы перерисовать рисунок 32.0а.</p>
+<pre><code>pip install numpy matplotlib scipy
+</code></pre>
+<h2>Файлы</h2>
+<table>
+<thead>
+<tr>
+<th>Файл</th>
+<th>Что это</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>world.py</code></td>
+<td>условный мир и тело индивида; паспорт мира (<code>WorldParams</code>)</td>
+</tr>
+<tr>
+<td><code>individual.py</code></td>
+<td>графы с памятью, графы без памяти (для сравнения), рождение графа в агонии, исполнитель</td>
+</tr>
+<tr>
+<td><code>main.py</code></td>
+<td>главный цикл: одна жизнь, один такт = один час</td>
+</tr>
+<tr>
+<td><code>signals.py</code>, <code>noise.py</code></td>
+<td>что передают друг другу части программы; аппаратный источник шума</td>
+</tr>
+<tr>
+<td><code>tests.py</code></td>
+<td>18 контрольных случаев с заранее известным ответом</td>
+</tr>
+<tr>
+<td><code>experiments/</code></td>
+<td>опыты и рисунки главы 32</td>
+</tr>
+<tr>
+<td><code>data/</code></td>
+<td>опубликованные серии (жизни индивидов, по которым построены таблица 32.1 и рисунок 32.1)</td>
+</tr>
+<tr>
+<td><code>docs/</code></td>
+<td>алгоритм простыми словами (RU, EN); исходники рисунков 32.0а, 32.0б</td>
+</tr>
+<tr>
+<td><code>figures/</code></td>
+<td>рисунки 32.0а–32.3, русские и английские, под страницу A5</td>
+</tr>
+</tbody>
+</table>
+<h2>Проверить программу</h2>
+<pre><code>python3 tests.py                  # должно пройти 18 из 18
+python3 main.py                   # одна жизнь; журнал в journal.txt
+</code></pre>
+<h2>Повторить главу 32 (запускать в папке experiments/)</h2>
+<p>Каждая жизнь получает свежий аппаратный шум, поэтому числа от серии к серии
+немного разные (примерно ±10 %); качественные результаты — нет.</p>
+<table>
+<thead>
+<tr>
+<th>Глава 32</th>
+<th>Команда</th>
+<th>Опубликованные значения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Сколько пережили первые–четвёртые трудные времена (таблица, рис. 32.1)</td>
+<td><code>python3 hard_times.py memory 100</code>; <code>... nomemory 100</code>; <code>... nobirth 100</code> (опубликованные серии по 200 — два прогона по 100, сложенные вместе)</td>
+<td>находит своё и помнит (200): 60 / 86 / 88 / 88 %, дожили до конца срока 52 из 200; не помнит (200): 29–38 / 0 %; только подсмотренное (100): 47 / 38 / 0 %</td>
+</tr>
+<tr>
+<td>Рисунок 32.1</td>
+<td><code>python3 figures.py survival ru</code> / <code>en</code> (читает <code>../data</code> или ваши <code>hard_times_*.json</code>)</td>
+<td></td>
+</tr>
+<tr>
+<td>Проверка мира</td>
+<td><code>python3 birth_in_agony.py c1_good 100</code>; <code>c2_hard</code>; <code>c3_oracle</code></td>
+<td>в благополучии 100 из 100 доживают до старости; в трудные времена без нового первые не переживает никто (0 из 100); знающий выход заранее переживает первые 77 из 100, доживает до старости 37 из 100</td>
+</tr>
+<tr>
+<td>Рождение в агонии, прилив сил</td>
+<td><code>python3 birth_in_agony.py full 100</code>; <code>insight</code>; <code>adrenaline</code>; <code>nostress</code>; <code>nobirth</code></td>
+<td>пережили первые / дожили до конца срока: 59/20, 61/22, 56/14, 57/8, 48/0</td>
+</tr>
+<tr>
+<td>Опыт или отбор</td>
+<td><code>python3 experience_vs_selection.py 90</code></td>
+<td>наибольший голод у одних и тех же индивидов: в первые 0,74, во вторые 0,25 (медианы); ниже у 24 из 33, критерий Уилкоксона p ≈ 7·10⁻⁵</td>
+</tr>
+<tr>
+<td>Рисунки 32.0а, 32.0б</td>
+<td><code>cd ../docs; dot -Tpng -Gdpi=300 structure_ru.dot -o fig32_0a_structure_ru.png</code>; <code>python3 simplex_fig.py ru</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Рисунки 32.2, 32.3 (иллюстрации)</td>
+<td><code>python3 figures.py life ru</code>; <code>python3 figures.py lostlife ru</code> (затем <code>en</code>: берётся та же жизнь)</td>
+<td>выбраны из нескольких жизней</td>
+</tr>
+</tbody>
+</table>
+<p>Программы рисунков сохраняют PNG в текущую папку; чтобы заменить опубликованные, перенесите их в <code>figures/</code>.</p>
+<p>Проценты для каждых трудных времён считаются от индивидов, <strong>доживших до их начала</strong>,
+а не от исходной сотни (например, 86 % во вторые трудные времена — это 79 из 92).</p>
+<h2>Случайность</h2>
+<p>Шум берётся из аппаратной энтропии операционной системы (<code>os.urandom</code>). Повторить целую
+жизнь в точности нельзя; отдельную часть программы — можно: записать её поток шума
+(<code>NoiseSource("hw", record=True)</code>) и подать его снова (<code>NoiseSource("replay", replay=...)</code>).</p>
+<h2>Целостность</h2>
+<p><code>SHA256SUMS</code> содержит контрольную сумму каждого файла: <code>sha256sum -c SHA256SUMS</code>.</p>
+<h2>Происхождение</h2>
+<p>Замороженная эталонная версия «3к» (мир v6, графы v6), 3–4 октября 2026 года. Эта английская
+редакция кода сверена с исходной: при одинаковых записанных потоках шума обе программы
+проживают побитно одинаковые жизни.</p>
+  </div>
+</article>
+</body>
+</html>
