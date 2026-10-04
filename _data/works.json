@@ -43,6 +43,17 @@
           "label": "Read the article"
         }
       ]
+    },
+    {
+      "kicker": "Causa Sui · Book 3 · Code and data",
+      "title": "The Simulated World: Program Behind Chapter 32",
+      "description": "Program that lives the life of an individual in a simulated world and checks whether the mechanisms of the theory (graphs, matrices, the birth of a new graph in agony) are consistent. Code, data, figures and the algorithm in plain words, in Russian and English.",
+      "links": [
+        {
+          "label": "Code, data, algorithm · RU / EN",
+          "url": "/stand/"
+        }
+      ]
     }
   ],
   "books": [

@@ -1,11 +1,20 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Appendix. How the program of the simulated world works</title>
-<style>body{font-family:Georgia,serif;max-width:46rem;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#1f1f1e;background:#fcfcfb}
-h1{font-size:1.5rem}h2{font-size:1.15rem;margin-top:2rem}code{background:#f0f0ec;padding:0 .25em}li{margin:.2em 0}table{border-collapse:collapse;font-size:.9em}td,th{border:1px solid #ccc;padding:.3em .5em;vertical-align:top}pre{background:#f0f0ec;padding:.6em;overflow-x:auto}img{max-width:100%}</style></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appendix. How the program of the simulated world works — Igor Shakhanov</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../stand.css">
+</head>
 <body>
-<p><a href="../index.html">← back to the simulated world page</a></p>
-<h1>Appendix. How the program of the simulated world works</h1>
+<article class="wrap">
+  <a class="back-link" href="../index.html">← back to the simulated world</a>
+  <header>
+    <div class="eyebrow">Causa Sui · Book 3 · Appendix</div>
+    <h1>Appendix. How the program of the simulated world works</h1>
+  </header>
+  <div class="article-body">
 <p>The program lives one life of one individual in a simulated world: up to 400 days, with a time step (tick) of one hour. The experiment of chapter 32 is hundreds of such lives, lived one after another. The program code is published on the author's website; this appendix describes what it does, without code.</p>
 <h2>1. What the program consists of</h2>
 <p>A diagram of the parts of the program and what they pass to each other is in chapter 32, section "How the simulated world and its inhabitant are built".</p>
@@ -129,4 +138,7 @@ h1{font-size:1.5rem}h2{font-size:1.15rem;margin-top:2rem}code{background:#f0f0ec
 <p><strong>Randomness.</strong> The noise source is hardware randomness of the computer itself; every value is new, so two lives never repeat exactly. Noise is not a reaction to a tie between options but a permanent part of the program: in the executor (every hour), at the edge of agony, in which way is offered at a birth, in the expectation inherited by a newborn graph, in the length of sleep, in the risk of ways, in which mushroom is picked, in meetings with the neighbour. To debug a single part, the noise stream can be recorded and replayed; the result then matches bit for bit.</p>
 <h2>6. How to repeat</h2>
 <p>The code and instructions are on the author's website (a link to download). Each table and figure of chapter 32 comes from one command; the expected numbers match the book within the random spread between series (about ±10 %).</p>
-</body></html>
+  </div>
+</article>
+</body>
+</html>

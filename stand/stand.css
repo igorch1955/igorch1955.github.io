@@ -1,0 +1,67 @@
+/* Pages of /stand/: same look as site articles (rules copied from _layouts/article.html). */
+
+  /* Page-specific styles only — shared variables, base elements, .wrap and
+     .eyebrow live in style.css. */
+
+  /* Article body reads more comfortably in a slightly narrower column
+     than the homepage's .wrap — intentional, not a mismatch. */
+  .wrap{ max-width:720px; padding:64px 28px 100px; }
+
+  .back-link{
+    font-family:'JetBrains Mono', monospace;
+    font-size:.78rem;
+    color:var(--ink-dim);
+    display:inline-block;
+    margin-bottom:40px;
+  }
+  .back-link:hover{ color:var(--gold); }
+
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:clamp(1.9rem, 4.4vw, 2.7rem);
+    line-height:1.15;
+    letter-spacing:-.01em;
+    margin:0 0 14px 0;
+  }
+  .date{
+    font-family:'JetBrains Mono', monospace;
+    font-size:.78rem;
+    color:var(--ink-dim);
+    margin-bottom:48px;
+  }
+
+  .article-body{ font-size:.95rem; color:var(--ink-body); border-top:1px solid var(--line); padding-top:36px; }
+  .article-body h2{ font-family:'Fraunces', serif; font-weight:500; font-size:1.5rem; margin:2em 0 .6em; color:var(--ink); }
+  .article-body h3{ font-family:'Fraunces', serif; font-weight:500; font-size:1.2rem; margin:1.8em 0 .5em; color:var(--ink); }
+  .article-body p{ margin:0 0 1.2em 0; color:var(--ink-body); }
+  .article-body strong{ font-weight:500; color:var(--ink); }
+  /* A paragraph that is ONLY a bold phrase is an in-body subheading */
+  .article-body p:has(> strong:only-child):not(:has(em)){
+    font-family:'JetBrains Mono', monospace;
+    font-size:.78rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:2.2em 0 1em 0;
+  }
+  .article-body p:has(> strong:only-child):not(:has(em)) strong{ font-weight:500; color:var(--gold); }
+  .article-body ul, .article-body ol{ color:var(--ink-body); padding-left:1.3em; margin:0 0 1.2em 0; }
+  .article-body li{ margin-bottom:.4em; }
+  .article-body blockquote{
+    margin:1.6em 0; padding:2px 0 2px 20px;
+    border-left:2px solid var(--gold);
+    color:var(--ink-dim);
+    font-style:italic;
+  }
+  .article-body code{ font-family:'JetBrains Mono', monospace; font-size:.9em; background:#141922; padding:.15em .4em; border-radius:3px; }
+  .article-body pre{ background:#0f1319; border:1px solid var(--line); border-radius:6px; padding:16px; overflow-x:auto; }
+  .article-body pre code{ background:none; padding:0; }
+  .article-body img{ max-width:100%; border-radius:4px; }
+  .article-body hr{ border:none; border-top:1px solid var(--line); margin:2.4em 0; }
+
+  .article-body table{ border-collapse:collapse; width:100%; font-size:.85rem; margin:0 0 1.4em 0; display:block; overflow-x:auto; }
+  .article-body th, .article-body td{ border:1px solid var(--line); padding:6px 10px; text-align:left; vertical-align:top; color:var(--ink-body); }
+  .article-body th{ color:var(--ink); font-weight:500; background:var(--bg-panel); }
+  .article-body h2:first-child{ margin-top:0; }
+  .lang-sep{ border:none; border-top:1px solid var(--line); margin:3em 0 2.4em; }
