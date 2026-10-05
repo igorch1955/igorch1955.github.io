@@ -34,3 +34,7 @@ exclude:
   - netlify
   - netlify.toml
   - README.md
+  # Markdown sources of /stand/ pages: the site serves the hand-made HTML
+  # versions; without this, GitHub Pages would also publish each .md as a
+  # duplicate page (README_RU.html, ALGORITHM_EN.html, ...)
+  - "stand/*.md"
