@@ -45,6 +45,17 @@
       ]
     },
     {
+      "kicker": "Causa Sui · Preregistration · 6 October 2026",
+      "title": "Expectations Recorded in Advance: Do New Connections Appear When Living Neural Tissue Masters a New Task?",
+      "description": "Before any experiment, states what the theory expects from cultured neural tissue and organoids: lasting mastery of a genuinely new task should be accompanied by new stable connections, not only by changes in the strength of existing ones — and names in advance the results that would mean the theory is wrong.",
+      "links": [
+        {
+          "label": "Zenodo · DOI 10.5281/zenodo.23185957",
+          "url": "https://doi.org/10.5281/zenodo.23185957"
+        }
+      ]
+    },
+    {
       "kicker": "Causa Sui · Book 3 · Code and data",
       "title": "The Simulated World: Program Behind Chapter 32",
       "description": "Program that lives the life of an individual in a simulated world and checks whether the mechanisms of the theory (graphs, matrices, the birth of a new graph in agony) are consistent. Code, data, figures and the algorithm in plain words, in Russian and English.",
