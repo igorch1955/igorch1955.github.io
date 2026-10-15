@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,10 @@
 <title>{{ page.title | escape }} — Igor Shakhanov</title>
 <meta name="description" content="{{ desc | strip | escape }}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+{%- if page.translation_url %}
+<link rel="alternate" hreflang="{{ page.lang | default: 'en' }}" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="{{ page.translation_lang }}" href="{{ page.translation_url | absolute_url }}">
+{%- endif %}
 <meta property="og:title" content="{{ page.title | escape }}">
 <meta property="og:description" content="{{ desc | strip | escape }}">
 <meta property="og:type" content="article">
@@ -92,7 +96,7 @@
   <header>
     {% if page.kicker %}<div class="eyebrow">{{ page.kicker | escape }}</div>{% endif %}
     <h1>{{ page.title | escape }}</h1>
-    <div class="date"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y-%m-%d' }}</time></div>
+    <div class="date"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y-%m-%d' }}</time>{% if page.translation_url %} · <a href="{{ page.translation_url | relative_url }}" hreflang="{{ page.translation_lang }}">{{ page.translation_label }}</a>{% endif %}</div>
   </header>
   <div class="article-body">
 {{ content }}
