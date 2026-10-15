@@ -80,6 +80,18 @@
   ],
   "books": [
     {
+      "kicker": "Project Causa Sui · Book Three",
+      "title": "Paths of Implementation",
+      "description": "The third book of the project moves from theory toward implementation: a strict form of Postulate 1, the mechanism of the subject as a hierarchy of graphs and matrices, a simulated world in which that mechanism was made to work, and a prediction for living neural tissue recorded in advance.",
+      "cover": "covers/thumb-causa-sui-book3.jpg",
+      "links": [
+        {
+          "label": "Zenodo · preprint (DOI 10.5281/zenodo.23243298)",
+          "url": "https://doi.org/10.5281/zenodo.23243298"
+        }
+      ]
+    },
+    {
       "kicker": "Project Causa Sui · Part II",
       "title": "A Foundation for Transhumanism",
       "description": "The second part of the Causa Sui project: transhumanism formulated a goal — the expansion of the space of reachable states — but never a rigorous mechanism for reaching it. This part supplies one.",
