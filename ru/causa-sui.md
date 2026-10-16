@@ -74,7 +74,22 @@ translation_label: "English version"
 
 ## Где прочитать подробнее
 
-Книга 1 [«Теория возникновения субъектности»](https://www.litres.ru/book/igor-shahanov/proekt-causa-sui-74198347/), книга 2 [«Базис трансгуманизма»](https://www.litres.ru/book/igor-shahanov/proekt-causa-sui-bazis-transgumanizma-chast-ii-74242204/), книга 3 [«Пути реализации»](https://www.litres.ru/book/igor-shahanov/proekt-causa-sui-puti-realizatsii-chast-iii-74630959/) — на Литрес. Англоязычные препринты на Zenodo: книга 1 — [doi.org/10.5281/zenodo.21460340](https://doi.org/10.5281/zenodo.21460340); книга 2 — [doi.org/10.5281/zenodo.21641230](https://doi.org/10.5281/zenodo.21641230); книга 3 — [doi.org/10.5281/zenodo.23243298](https://doi.org/10.5281/zenodo.23243298); предварительная регистрация предсказания — [doi.org/10.5281/zenodo.23185957](https://doi.org/10.5281/zenodo.23185957). Программа условного мира и её описание — [igorch1955.github.io/stand/](/stand/).
+Книги на Литрес:
+
+- Книга 1 — [«Теория возникновения субъектности»](https://www.litres.ru/book/igor-shahanov/proekt-causa-sui-74198347/)
+- Книга 2 — [«Базис трансгуманизма»](https://www.litres.ru/book/igor-shahanov/proekt-causa-sui-bazis-transgumanizma-chast-ii-74242204/)
+- Книга 3 — [«Пути реализации»](https://www.litres.ru/book/igor-shahanov/proekt-causa-sui-puti-realizatsii-chast-iii-74630959/)
+
+Англоязычные препринты на Zenodo:
+
+- Книга 1 — [doi.org/10.5281/zenodo.21460340](https://doi.org/10.5281/zenodo.21460340)
+- Книга 2 — [doi.org/10.5281/zenodo.21641230](https://doi.org/10.5281/zenodo.21641230)
+- Книга 3 — [doi.org/10.5281/zenodo.23243298](https://doi.org/10.5281/zenodo.23243298)
+- Предварительная регистрация предсказания — [doi.org/10.5281/zenodo.23185957](https://doi.org/10.5281/zenodo.23185957)
+
+Программа условного мира и её описание:
+
+- [igorch1955.github.io/stand/](/stand/)
 
 *Книги написаны в соавторстве с ИИ Claude (Anthropic): рутинную часть работы — сверку, расчёты, программу, многократную переработку текста — выполнял он. Теория, её постулаты и решения — авторские.*
 

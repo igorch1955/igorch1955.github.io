@@ -74,7 +74,22 @@ Either way, the question moves from the realm of opinion to the realm of testing
 
 ## Further Reading
 
-Book 1, [“A Theory of the Origin of Subjecthood”](https://www.amazon.com/dp/B0HBQB7JC4); Book 2, [“A Foundation for Transhumanism”](https://www.amazon.com/dp/B0H6M6G5VG); Book 3, [“Paths of Implementation”](https://www.amazon.com/dp/B0HN52WR86) — on Amazon. English preprints on Zenodo: Book 1 — [doi.org/10.5281/zenodo.21460340](https://doi.org/10.5281/zenodo.21460340); Book 2 — [doi.org/10.5281/zenodo.21641230](https://doi.org/10.5281/zenodo.21641230); Book 3 — [doi.org/10.5281/zenodo.23243298](https://doi.org/10.5281/zenodo.23243298); preregistration of the prediction — [doi.org/10.5281/zenodo.23185957](https://doi.org/10.5281/zenodo.23185957). The simulated world program and its description — [igorch1955.github.io/stand/](/stand/).
+Books on Amazon:
+
+- Book 1 — [“A Theory of the Origin of Subjecthood”](https://www.amazon.com/dp/B0HBQB7JC4)
+- Book 2 — [“A Foundation for Transhumanism”](https://www.amazon.com/dp/B0H6M6G5VG)
+- Book 3 — [“Paths of Implementation”](https://www.amazon.com/dp/B0HN52WR86)
+
+English preprints on Zenodo:
+
+- Book 1 — [doi.org/10.5281/zenodo.21460340](https://doi.org/10.5281/zenodo.21460340)
+- Book 2 — [doi.org/10.5281/zenodo.21641230](https://doi.org/10.5281/zenodo.21641230)
+- Book 3 — [doi.org/10.5281/zenodo.23243298](https://doi.org/10.5281/zenodo.23243298)
+- Preregistration of the prediction — [doi.org/10.5281/zenodo.23185957](https://doi.org/10.5281/zenodo.23185957)
+
+The simulated world program and its description:
+
+- [igorch1955.github.io/stand/](/stand/)
 
 *The books were written in collaboration with the AI Claude (Anthropic): it carried out the routine part of the work — cross-checking, calculations, the program, repeated rewriting of the text. The theory, its postulates and decisions are the author’s.*
 
