@@ -86,6 +86,10 @@
       "cover": "covers/thumb-causa-sui-book3.jpg",
       "links": [
         {
+          "label": "Litres",
+          "url": "https://www.litres.ru/book/igor-shahanov/proekt-causa-sui-puti-realizatsii-chast-iii-74630959/"
+        },
+        {
           "label": "Zenodo · preprint (DOI 10.5281/zenodo.23243298)",
           "url": "https://doi.org/10.5281/zenodo.23243298"
         },
