@@ -41,6 +41,10 @@
         {
           "label": "Zenodo · DOI 10.5281/zenodo.23243298",
           "url": "https://doi.org/10.5281/zenodo.23243298"
+        },
+        {
+          "label": "PhilPapers / PhilArchive",
+          "url": "https://philpapers.org/rec/SHAPCS-2"
         }
       ]
     },
