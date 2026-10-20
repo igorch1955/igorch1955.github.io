@@ -16,6 +16,10 @@ Anyone who has played computer games knows the “Save” button. You save befor
 
 Project Causa Sui begins with a question: is this where the line runs between a subject — someone who acts on their own, answers for themselves, can be afraid and can make mistakes — and even the most complex machine?
 
+## Why "Causa Sui"
+
+*Causa sui* is Latin for "cause of itself." In classical philosophy the term was reserved for what depends on nothing outside itself: for the scholastics and Descartes, God; for Spinoza, substance, whose essence already includes existence. Nietzsche called the idea a contradiction — nothing can pull itself out of nonexistence by its own hair. The project keeps the essence of the expression but applies it not to the infinite, but to the finite and mortal. It is not about God or creation from nothing. A finite being, too, can be a cause of itself: the source of its action cannot be taken outside, separated from its body and copied onto another carrier. Every act irreversibly changes the one who acts, and the next act is performed by someone already changed. A subject does not create itself from nothing; it keeps building itself out of its own history.
+
 ## Not a Question of Complexity
 
 Artificial intelligence writes texts, solves problems, holds conversations. Many expect that once it is complex enough, it will become conscious. The theory puts the question differently: what matters is not how complex a system is, but how it is built.
@@ -29,8 +33,6 @@ A computer has a carrier — the hardware — and a program. The program can be 
 Living things are different. Take someone who has learned to ride a bicycle. The skill is not a file. It is written into changed connections between brain cells, into muscles, into the body itself. You cannot take out the “riding program” and copy it to another person. And learning itself changed the carrier — irreversibly.
 
 The theory takes this as its starting point: **in a subject, the program of action and the carrier cannot be separated.** This gives a test. Make a copy of a system and compare it with the original. For a computer program the difference is zero — the copy is indistinguishable. For a subject the difference is not zero: an exact copy does not exist, only a “near-exact” one. Zero or not zero — that is the line.
-
-Hence the name of the project. Causa Sui is Latin for “cause of itself”: the source of action cannot be taken outside the system, separated and copied.
 
 ## Why It Matters: Fear and Responsibility
 
