@@ -19,6 +19,10 @@
         {
           "label": "Zenodo · DOI 10.5281/zenodo.21460340",
           "url": "https://doi.org/10.5281/zenodo.21460340"
+        },
+        {
+          "label": "PhilPapers / PhilArchive",
+          "url": "https://philpapers.org/rec/SHAPCS-4"
         }
       ]
     },
@@ -30,6 +34,10 @@
         {
           "label": "Zenodo · DOI 10.5281/zenodo.21641230",
           "url": "https://doi.org/10.5281/zenodo.21641230"
+        },
+        {
+          "label": "PhilPapers / PhilArchive",
+          "url": "https://philpapers.org/rec/SHAPCS-3"
         }
       ]
     },
