@@ -87,7 +87,7 @@ translation_label: "English version"
 - Книга 1 — [doi.org/10.5281/zenodo.21460340](https://doi.org/10.5281/zenodo.21460340)
 - Книга 2 — [doi.org/10.5281/zenodo.21641230](https://doi.org/10.5281/zenodo.21641230)
 - Книга 3 — [doi.org/10.5281/zenodo.23243298](https://doi.org/10.5281/zenodo.23243298)
-- Предварительная регистрация предсказания — [doi.org/10.5281/zenodo.23185957](https://doi.org/10.5281/zenodo.23185957)
+- Предварительная регистрация предсказания — [doi.org/10.5281/zenodo.23185956](https://doi.org/10.5281/zenodo.23185956)
 
 Программа условного мира и её описание:
 

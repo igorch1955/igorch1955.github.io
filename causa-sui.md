@@ -87,7 +87,7 @@ English preprints on Zenodo:
 - Book 1 — [doi.org/10.5281/zenodo.21460340](https://doi.org/10.5281/zenodo.21460340)
 - Book 2 — [doi.org/10.5281/zenodo.21641230](https://doi.org/10.5281/zenodo.21641230)
 - Book 3 — [doi.org/10.5281/zenodo.23243298](https://doi.org/10.5281/zenodo.23243298)
-- Preregistration of the prediction — [doi.org/10.5281/zenodo.23185957](https://doi.org/10.5281/zenodo.23185957)
+- Preregistration of the prediction — [doi.org/10.5281/zenodo.23185956](https://doi.org/10.5281/zenodo.23185956)
 
 The simulated world program and its description:
 
