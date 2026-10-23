@@ -64,8 +64,9 @@
   .article-body h3{ font-family:'Fraunces', serif; font-weight:500; font-size:1.2rem; margin:1.8em 0 .5em; color:var(--ink); }
   .article-body p{ margin:0 0 1.2em 0; color:var(--ink-body); }
   .article-body strong{ font-weight:500; color:var(--ink); }
-  /* A paragraph that is ONLY a bold phrase is an in-body subheading */
-  .article-body p:has(> strong:only-child):not(:has(em)){
+  /* A paragraph that is ONLY a bold phrase is an in-body subheading
+     (marked with .subhead by the script at the end of the page) */
+  .article-body p.subhead{
     font-family:'JetBrains Mono', monospace;
     font-size:.78rem;
     letter-spacing:.1em;
@@ -73,7 +74,7 @@
     color:var(--gold);
     margin:2.2em 0 1em 0;
   }
-  .article-body p:has(> strong:only-child):not(:has(em)) strong{ font-weight:500; color:var(--gold); }
+  .article-body p.subhead strong{ font-weight:500; color:var(--gold); }
   .article-body ul, .article-body ol{ color:var(--ink-body); padding-left:1.3em; margin:0 0 1.2em 0; }
   .article-body li{ margin-bottom:.4em; }
   .article-body blockquote{
@@ -102,6 +103,15 @@
 {{ content }}
   </div>
 </article>
+<script>
+  // :has(> strong:only-child) in CSS ignores plain text, so it also caught
+  // ordinary paragraphs with one bold phrase. Here we compare the text itself.
+  document.querySelectorAll('.article-body p').forEach(function(p){
+    var b = p.querySelector(':scope > strong');
+    if (b && p.children.length === 1 && !b.querySelector('em') &&
+        p.textContent.trim() === b.textContent.trim()) p.classList.add('subhead');
+  });
+</script>
 
 </body>
 </html>
