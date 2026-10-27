@@ -57,6 +57,21 @@
       ]
     },
     {
+      "kicker": "Causa Sui · Preprint · 27 October 2026",
+      "title": "Succession of a Subject at a Distance: What Is Transmitted and What Is Grown",
+      "description": "A subject cannot be sent, but it can have a successor at any distance: matrices and the growth program travel over a channel, while the graph is grown on the spot — at the time of transfer or in advance. Transfer is not restore; the source need not perish, and the chain of successors becomes a tree. The strict version of the essay “Is Teleportation Real?”.",
+      "links": [
+        {
+          "label": "Zenodo · DOI 10.5281/zenodo.23685278",
+          "url": "https://doi.org/10.5281/zenodo.23685278"
+        },
+        {
+          "label": "PhilPapers / PhilArchive",
+          "url": "https://philpapers.org/rec/SHASOA-2"
+        }
+      ]
+    },
+    {
       "kicker": "Causa Sui · Essay · 23 October 2026",
       "title": "Is Teleportation Real? What Travels and What Grows: Succession of a Subject at a Distance",
       "description": "Science-fiction teleportation assumes the very same person arrives at the other end, and that is what makes it a utopia. The theory of Causa Sui separates what in a subject can be transmitted (its content: knowledge, memory, skills) from what can only be grown (the living structure that binds it together). Hence a more honest teleportation: a carrier is grown on the spot from a transmitted program, the content follows as a signal, and what arrives is a successor whose difference from the original can be estimated and measured.",
