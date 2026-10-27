@@ -155,6 +155,10 @@
         {
           "label": "Amazon KDP (ASIN B0HBQB7JC4)",
           "url": "https://www.amazon.com/dp/B0HBQB7JC4"
+        },
+        {
+          "label": "PhilArchive · 2nd edition (open access)",
+          "url": "https://philpapers.org/rec/SHAPCS-5"
         }
       ]
     }
