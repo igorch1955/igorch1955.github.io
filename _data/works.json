@@ -165,13 +165,17 @@
   ],
   "archive": [
     {
-      "kicker": "Рассказ · Серия 1 · 18 ноября 2026 · на русском",
-      "title": "Я обязательно проснусь собой. Серия 1: Пропущенный звонок",
-      "description": "Если записать о человеке всё — проснётся ли он собой? Клэр с Ки-Уэста собрала цифрового двойника погибшего отца и теперь каждый день записывает себя, чтобы однажды проснуться. Литературная основа видеосериала; герои и полный текст первой серии.",
+      "kicker": "Story · Episode 1 · 18 November 2026 · EN / RU",
+      "title": "I Will Wake Up as Myself · Я обязательно проснусь собой",
+      "description": "If you record everything about a person — will they wake up as themselves? Claire from Key West built a digital double of her late father, and now records herself every day so that one day she will wake up. The literary basis of a narrated video series: the characters and the full text of episode one. — Если записать о человеке всё — проснётся ли он собой? Клэр с Ки-Уэста собрала цифрового двойника погибшего отца и теперь каждый день записывает себя, чтобы однажды проснуться. Литературная основа видеосериала: герои и полный текст первой серии.",
       "links": [
         {
+          "url": "/articles/i-will-wake-up-as-myself/",
+          "label": "Read in English"
+        },
+        {
           "url": "/articles/ya-obyazatelno-prosnus-soboy/",
-          "label": "Читать"
+          "label": "Читать по-русски"
         }
       ]
     },
