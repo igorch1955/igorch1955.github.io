@@ -165,6 +165,17 @@
   ],
   "archive": [
     {
+      "kicker": "Рассказ · Серия 1 · 18 ноября 2026 · на русском",
+      "title": "Я обязательно проснусь собой. Серия 1: Пропущенный звонок",
+      "description": "Если записать о человеке всё — проснётся ли он собой? Клэр с Ки-Уэста собрала цифрового двойника погибшего отца и теперь каждый день записывает себя, чтобы однажды проснуться. Литературная основа видеосериала; герои и полный текст первой серии.",
+      "links": [
+        {
+          "url": "/articles/ya-obyazatelno-prosnus-soboy/",
+          "label": "Читать"
+        }
+      ]
+    },
+    {
       "kicker": "Causa Sui · Essay · 23 October 2026",
       "title": "Is Teleportation Real? What Travels and What Grows: Succession of a Subject at a Distance",
       "description": "Science-fiction teleportation assumes the very same person arrives at the other end, and that is what makes it a utopia. The theory of Causa Sui separates what in a subject can be transmitted (its content: knowledge, memory, skills) from what can only be grown (the living structure that binds it together). Hence a more honest teleportation: a carrier is grown on the spot from a transmitted program, the content follows as a signal, and what arrives is a successor whose difference from the original can be estimated and measured.",
