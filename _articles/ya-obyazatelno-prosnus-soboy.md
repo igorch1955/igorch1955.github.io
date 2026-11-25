@@ -18,7 +18,8 @@ description: "Фильм в двух сериях о девушке с Кей В
   .lead-q{ font-family:'Fraunces', serif; font-style:italic; font-size:1.25rem; color:var(--ink); margin:0 0 1.4em; }
   .scene-break{ text-align:center; color:var(--ink-dim); letter-spacing:.4em; margin:2em 0 !important; }
   .credits{ font-size:.8rem; color:var(--ink-dim); }
-  .more-link{ margin:2em 0 2.4em; font-size:1.05rem; }
+  .more-link{ margin:.6em 0; font-size:1.05rem; }
+  .more-link:first-of-type{ margin-top:2em; }
   .ep{ margin:2.6em 0 3em; }
   .ep h3{ margin-bottom:.5em; }
   .ep-pics{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:1.2em 0; }
@@ -112,6 +113,7 @@ description: "Фильм в двух сериях о девушке с Кей В
 Я живу в доме, где выросла. Здесь всё пахнет солью и машинным маслом. Маслом — из-за отца.
 
 <p class="more-link"><a href="/articles/ya-obyazatelno-prosnus-soboy-tekst/">Полный текст первой серии →</a></p>
+<p class="more-link"><a href="/articles/ya-obyazatelno-prosnus-soboy-tekst-2/">Полный текст второй серии →</a></p>
 
 ---
 
