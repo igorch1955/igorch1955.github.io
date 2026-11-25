@@ -1,13 +1,13 @@
 ---
 slug: "ya-obyazatelno-prosnus-soboy"
 title: "Я обязательно проснусь собой"
-kicker: "Рассказ · Серия 1 · Пропущенный звонок"
+kicker: "Фильм · Серии 1 и 2 · Текст первой серии"
 date: 2026-11-18
 lang: ru
 translation_lang: en
 translation_url: /articles/i-will-wake-up-as-myself/
 translation_label: "English version"
-description: "Если записать о человеке всё — проснётся ли он собой? Клэр с Ки-Уэста собрала цифрового двойника погибшего отца и теперь каждый день записывает себя, чтобы однажды проснуться. Первая серия истории."
+description: "Фильм в двух сериях о девушке с Кей Веста, которая записывает свою жизнь, чтобы однажды её продолжить: трансгуманизм, загрузка сознания, цифровое бессмертие. Сюжет опирается на книгу Игоря Шаханова (Igor Shakhanov) «Project Causa Sui: A Foundation for Transhumanism»."
 ---
 <style>
   .heroes{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:2em 0 2.4em; }
@@ -18,14 +18,22 @@ description: "Если записать о человеке всё — прос�
   .lead-q{ font-family:'Fraunces', serif; font-style:italic; font-size:1.25rem; color:var(--ink); margin:0 0 1.4em; }
   .scene-break{ text-align:center; color:var(--ink-dim); letter-spacing:.4em; margin:2em 0 !important; }
   .credits{ font-size:.8rem; color:var(--ink-dim); }
-  @media (max-width:640px){ .heroes{ grid-template-columns:1fr; } .heroes img{ aspect-ratio:auto; } }
+  .ep{ margin:2.6em 0 3em; }
+  .ep h3{ margin-bottom:.5em; }
+  .ep-pics{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:1.2em 0; }
+  .ep-pics img{ width:100%; aspect-ratio:16/10; object-fit:cover; border-radius:4px; display:block; }
+  .ep-video{ position:relative; width:100%; aspect-ratio:16/9; background:#000; border-radius:4px; overflow:hidden; margin:1.2em 0 .5em; }
+  .ep-video iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .ep-src{ font-size:.85rem; color:var(--ink-dim); }
+  .ep-basis{ font-style:italic; }
+  @media (max-width:640px){ .heroes{ grid-template-columns:1fr; } .heroes img{ aspect-ratio:auto; } .ep-pics{ grid-template-columns:1fr; } }
 </style>
 
 <p class="lead-q">Если записать о человеке всё — проснётся ли он собой?</p>
 
 Клэр двадцать восемь лет, она программист и живёт на Ки-Уэсте, где каждый вечер весь остров провожает солнце. Её отец, капитан рыболовной яхты, однажды утром позвонил ей перед выходом в море, а она не взяла трубку. Из его сообщений и голосовых она собрала цифрового Сильвера — и поняла, что этого мало. Теперь она каждый день записывает себя: чтобы от неё осталась не кепка на крючке, а она сама.
 
-Это первая из двух серий. Её текст написан для закадрового голоса.
+Ниже — обе серии фильма, а после них полный текст первой серии, написанный для закадрового голоса.
 
 <div class="heroes">
   <figure><img src="/media/wake-up/claire.jpg" alt="Клэр" loading="lazy"><figcaption><b>Клэр</b>Двадцать восемь лет, программист. Отец звал её шкипером.</figcaption></figure>
@@ -33,7 +41,46 @@ description: "Если записать о человеке всё — прос�
   <figure><img src="/media/wake-up/jake.jpg" alt="Джейк" loading="lazy"><figcaption><b>Джейк</b>Механик с соседнего причала. Не любит говорить о серьёзном.</figcaption></figure>
 </div>
 
-## Серия 1. Пропущенный звонок
+## Фильм
+
+<div class="ep">
+<h3>Я обязательно проснусь собой. Серия 1</h3>
+
+<div class="ep-pics">
+  <img src="/media/wake-up/ep1-sunset.jpg" alt="Клэр на закате, Кей Вест" loading="lazy">
+  <img src="/media/wake-up/ep1-helm.jpg" alt="Клэр за штурвалом яхты «Маргарет»" loading="lazy">
+</div>
+
+<p>Фильм о молодой девушке с Кей Веста, которая после гибели отца по воле случая начинает записывать свою жизнь — день за днём, в надежде однажды её продолжить. Она верит: если записать о человеке всё, он проснётся собой. Сериал о мечте трансгуманизма — загрузке сознания и цифровом бессмертии — и о том, что на самом деле остаётся от человека.</p>
+
+<p class="ep-basis">Сюжет опирается на основные положения книги Игоря Шаханова (Igor Shakhanov) «Project Causa Sui: A Foundation for Transhumanism».</p>
+
+<div class="ep-video"><iframe src="https://dzen.ru/embed/oR0bxlMgRAAA?from_block=partner&from=zen&mute=0&autoplay=0&tv=0" title="Я обязательно проснусь собой. Серия 1" allow="autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture; encrypted-media" allowfullscreen loading="lazy"></iframe></div>
+<p class="ep-src">18 минут · <a href="https://dzen.ru/video/watch/6b06da321991372a3932c3e4">смотреть на Дзене</a></p>
+</div>
+
+<div class="ep">
+<h3>Я обязательно проснусь собой. Серия 2</h3>
+
+<div class="ep-pics">
+  <img src="/media/wake-up/ep2-city.jpg" alt="Клэр идёт по большому городу" loading="lazy">
+  <img src="/media/wake-up/ep2-lab.jpg" alt="Лаборатория через сто лет" loading="lazy">
+</div>
+
+<p>Ураган уничтожает часть записей. Рядом человек, который считает, что записывать ничего не нужно. Впереди двадцать лет жизни и разговор с собственной копией. Через сто лет архив Клэр попадает к двум исследователям — и им решать, что с ним делать. Чем копия отличается от человека и проснётся ли тот, кто записал себя целиком?</p>
+
+<p class="ep-basis">Сюжет опирается на основные положения книги Игоря Шаханова (Igor Shakhanov) «Project Causa Sui: A Foundation for Transhumanism».</p>
+
+<div class="ep-video"><iframe src="https://dzen.ru/embed/oR0bIrcgRAAA?from_block=partner&from=zen&mute=0&autoplay=0&tv=0" title="Я обязательно проснусь собой. Серия 2" allow="autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture; encrypted-media" allowfullscreen loading="lazy"></iframe></div>
+<p class="ep-src">21 минута · <a href="https://dzen.ru/video/watch/6b06e1bf412ff90ddd4f71c1">смотреть на Дзене</a></p>
+</div>
+
+<script type="application/ld+json">
+[{"@context":"https://schema.org","@type":"VideoObject","name":"Я обязательно проснусь собой. Серия 1","description":"Фильм о молодой девушке с Кей Веста, которая после гибели отца начинает записывать свою жизнь в надежде однажды её продолжить. Трансгуманизм, загрузка сознания, цифровое бессмертие. По книге Igor Shakhanov «Project Causa Sui: A Foundation for Transhumanism».","thumbnailUrl":"https://igorch1955.github.io/media/wake-up/ep1-sunset.jpg","uploadDate":"2026-11-25","duration":"PT18M9S","embedUrl":"https://dzen.ru/embed/oR0bxlMgRAAA","inLanguage":"ru","author":{"@type":"Person","name":"Igor Shakhanov"}},
+ {"@context":"https://schema.org","@type":"VideoObject","name":"Я обязательно проснусь собой. Серия 2","description":"Ураган, двадцать лет жизни, разговор с собственной копией и архив, найденный через сто лет. Чем копия отличается от человека? По книге Igor Shakhanov «Project Causa Sui: A Foundation for Transhumanism».","thumbnailUrl":"https://igorch1955.github.io/media/wake-up/ep2-city.jpg","uploadDate":"2026-11-25","duration":"PT21M32S","embedUrl":"https://dzen.ru/embed/oR0bIrcgRAAA","inLanguage":"ru","author":{"@type":"Person","name":"Igor Shakhanov"}}]
+</script>
+
+## Текст первой серии
 
 Однажды — может быть, через сто лет — кто-то откроет глаза и скажет: «Меня зовут Клэр. Я родилась на Ки-Уэст. Мой отец звал меня шкипером».
 
@@ -315,4 +362,4 @@ description: "Если записать о человеке всё — прос�
 
 ---
 
-<p class="credits">© 2026 Игорь Шаханов. Текст и сценарий: Игорь Шаханов. Иллюстрации созданы в Adobe Firefly.</p>
+<p class="credits">© 2026 Игорь Шаханов (Igor Shakhanov). Текст и сценарий: Игорь Шаханов. Фильм сделан с помощью Claude (Anthropic), ChatGPT (OpenAI), Adobe Firefly, ElevenLabs; звуки — Pixabay.</p>
