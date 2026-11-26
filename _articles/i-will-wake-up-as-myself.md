@@ -25,7 +25,7 @@ description: "If you record everything about a person — will they wake up as t
 
 Claire is twenty-eight, a programmer living on Key West, where every evening the whole island sees the sun off. Her father, the captain of a fishing yacht, called her one morning before heading out to sea, and she didn’t pick up. From his messages and voice notes she put together a digital Silver — and realized it wasn’t enough. Now she records herself every day, so that what remains of her is not a cap on a hook, but herself.
 
-This is the first of two episodes. The text was written for voice-over narration.
+This is the first of two episodes. The text was written for voice-over narration. After watching, you may want to read <a href="/articles/i-will-wake-up-as-myself-symbolism/">an essay on the film’s symbolism</a>.
 
 <div class="heroes">
   <figure><img src="/media/wake-up/claire.jpg" alt="Claire" loading="lazy"><figcaption><b>Claire</b>Twenty-eight, a programmer. Her father called her Skipper.</figcaption></figure>
@@ -312,6 +312,8 @@ And he hung up without waiting for an answer.
 I wrote his question down that same day. Word for word.
 
 <p class="scene-break">To be continued…</p>
+
+<p><a href="/articles/i-will-wake-up-as-myself-symbolism/">Symbolism in the film: what lies behind the spark plugs, the notebook and the hurricane →</a></p>
 
 ---
 
