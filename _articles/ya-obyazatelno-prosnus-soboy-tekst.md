@@ -311,7 +311,7 @@ description: "Полный текст первой серии фильма «Я 
 
 <p class="scene-break">Продолжение следует…</p>
 
-<p><a href="/articles/ya-obyazatelno-prosnus-soboy/">← К фильму: обе серии</a> · <a href="/articles/ya-obyazatelno-prosnus-soboy-tekst-2/">Текст второй серии →</a></p>
+<p><a href="/articles/ya-obyazatelno-prosnus-soboy/">← К фильму: обе серии</a> · <a href="/articles/ya-obyazatelno-prosnus-soboy-tekst-2/">Текст второй серии →</a> · <a href="/articles/ya-obyazatelno-prosnus-soboy-simvolizm/">Символизм фильма</a></p>
 
 ---
 

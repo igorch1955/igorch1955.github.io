@@ -370,7 +370,7 @@ description: "Полный текст второй серии фильма «Я 
 
 Я обязательно проснусь собой.
 
-<p><a href="/articles/ya-obyazatelno-prosnus-soboy/">← К фильму: обе серии</a> · <a href="/articles/ya-obyazatelno-prosnus-soboy-tekst/">Текст первой серии</a></p>
+<p><a href="/articles/ya-obyazatelno-prosnus-soboy/">← К фильму: обе серии</a> · <a href="/articles/ya-obyazatelno-prosnus-soboy-tekst/">Текст первой серии</a> · <a href="/articles/ya-obyazatelno-prosnus-soboy-simvolizm/">Символизм фильма</a></p>
 
 ---
 
