@@ -58,7 +58,7 @@ description: "Фильм в двух сериях о девушке с Кей В
 <p class="ep-basis">Сюжет опирается на основные положения книги Игоря Шаханова (Igor Shakhanov) «Project Causa Sui: A Foundation for Transhumanism».</p>
 
 <div class="ep-video"><iframe src="https://dzen.ru/embed/oR0bxlMgRAAA?from_block=partner&from=zen&mute=0&autoplay=0&tv=0" title="Я обязательно проснусь собой. Серия 1" allow="autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture; encrypted-media" allowfullscreen loading="lazy"></iframe></div>
-<p class="ep-src">18 минут · <a href="https://dzen.ru/video/watch/6b06da321991372a3932c3e4">смотреть на Дзене</a></p>
+<p class="ep-src">18 минут · <a href="https://dzen.ru/video/watch/6b06da321991372a3932c3e4">смотреть на Дзене</a> · <a href="https://youtu.be/mzRmvsBZ1sg">смотреть на YouTube</a> (с русскими субтитрами)</p>
 </div>
 
 <div class="ep">
@@ -74,8 +74,10 @@ description: "Фильм в двух сериях о девушке с Кей В
 <p class="ep-basis">Сюжет опирается на основные положения книги Игоря Шаханова (Igor Shakhanov) «Project Causa Sui: A Foundation for Transhumanism».</p>
 
 <div class="ep-video"><iframe src="https://dzen.ru/embed/oR0bIrcgRAAA?from_block=partner&from=zen&mute=0&autoplay=0&tv=0" title="Я обязательно проснусь собой. Серия 2" allow="autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture; encrypted-media" allowfullscreen loading="lazy"></iframe></div>
-<p class="ep-src">21 минута · <a href="https://dzen.ru/video/watch/6b06e1bf412ff90ddd4f71c1">смотреть на Дзене</a></p>
+<p class="ep-src">21 минута · <a href="https://dzen.ru/video/watch/6b06e1bf412ff90ddd4f71c1">смотреть на Дзене</a> · <a href="https://youtu.be/abJcdbjzVqg">смотреть на YouTube</a> (с русскими субтитрами)</p>
 </div>
+
+<p class="ep-src">Обе серии на YouTube: <a href="https://www.youtube.com/@IgorShakhanovFilm">@IgorShakhanovFilm</a>. Английская версия фильма — на <a href="/articles/i-will-wake-up-as-myself/">английской странице</a>.</p>
 
 <script type="application/ld+json">
 [{"@context":"https://schema.org","@type":"VideoObject","name":"Я обязательно проснусь собой. Серия 1","description":"Фильм о молодой девушке с Кей Веста, которая после гибели отца начинает записывать свою жизнь в надежде однажды её продолжить. Трансгуманизм, загрузка сознания, цифровое бессмертие. По книге Igor Shakhanov «Project Causa Sui: A Foundation for Transhumanism».","thumbnailUrl":"https://igorch1955.github.io/media/wake-up/ep1-sunset.jpg","uploadDate":"2026-11-25","duration":"PT18M9S","embedUrl":"https://dzen.ru/embed/oR0bxlMgRAAA","inLanguage":"ru","author":{"@type":"Person","name":"Igor Shakhanov"}},
