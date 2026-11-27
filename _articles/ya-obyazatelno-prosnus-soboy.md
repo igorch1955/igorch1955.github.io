@@ -118,6 +118,7 @@ description: "Фильм в двух сериях о девушке с Кей В
 <p class="more-link"><a href="/articles/ya-obyazatelno-prosnus-soboy-tekst/">Полный текст первой серии →</a></p>
 <p class="more-link"><a href="/articles/ya-obyazatelno-prosnus-soboy-tekst-2/">Полный текст второй серии →</a></p>
 <p class="more-link"><a href="/articles/ya-obyazatelno-prosnus-soboy-simvolizm/">Символизм в фильме: что стоит за свечами, тетрадью и ураганом →</a></p>
+<p class="ep-src">Короткий видео-разбор (10 минут): <a href="https://youtu.be/uhIApvmtgLg">смотреть на YouTube</a></p>
 
 ---
 
