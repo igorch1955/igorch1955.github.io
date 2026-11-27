@@ -5,7 +5,7 @@ kicker: "Текст фильма · Серия 1"
 date: 2026-11-25
 lang: ru
 translation_lang: en
-translation_url: /articles/i-will-wake-up-as-myself/
+translation_url: /articles/i-will-wake-up-as-myself-text/
 translation_label: "English version"
 description: "Полный текст первой серии фильма «Я обязательно проснусь собой» — о девушке с Кей Веста, которая записывает свою жизнь, чтобы однажды её продолжить. Трансгуманизм, загрузка сознания, цифровое бессмертие. По книге Igor Shakhanov «Project Causa Sui: A Foundation for Transhumanism»."
 ---

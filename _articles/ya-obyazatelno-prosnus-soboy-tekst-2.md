@@ -4,6 +4,9 @@ title: "Я обязательно проснусь собой. Серия 2 — 
 kicker: "Текст фильма · Серия 2"
 date: 2026-11-25
 lang: ru
+translation_lang: en
+translation_url: /articles/i-will-wake-up-as-myself-text-2/
+translation_label: "English version"
 description: "Полный текст второй серии фильма «Я обязательно проснусь собой»: ураган, двадцать лет жизни, разговор с собственной копией и архив Клэр через сто лет. Трансгуманизм, загрузка сознания, цифровое бессмертие. По книге Igor Shakhanov «Project Causa Sui: A Foundation for Transhumanism»."
 ---
 <style>

@@ -18,7 +18,7 @@ description: "What lies behind the scenes of the film “I Will Wake Up as Mysel
 
 ## Before you read
 
-This text is best read after watching. It does not retell the plot. It is about what stands behind the scenes: why the frame holds spark plugs, a notebook, voice messages and a hurricane. The film, with the full text of episode one, is on the <a href="/articles/i-will-wake-up-as-myself/">film page</a>.
+This text is best read after watching. It does not retell the plot. It is about what stands behind the scenes: why the frame holds spark plugs, a notebook, voice messages and a hurricane. Both episodes are on the <a href="/articles/i-will-wake-up-as-myself/">film page</a>.
 
 The film speaks quietly and does not explain itself. That is the author’s choice: the viewer is meant to think while listening. But many details are easy to miss. This essay is for those who watched, felt that there was a thought behind the story, and could not quite catch it.
 
@@ -154,4 +154,4 @@ The film condemns no one. Not Claire with her notebooks, not the young researche
 
 For those who want to follow this thought to the end, without plot or images, there is the book by Igor Shakhanov, “Project Causa Sui: A Foundation for Transhumanism.” It says the same thing in the language of theory: a subject’s history is inseparable from it, and a copy is a new instance, however precisely it is assembled. Jake would put it more briefly: you’ll build one just like it. But not this one.
 
-<p class="art-nav"><a href="/articles/i-will-wake-up-as-myself/">← To the film page</a> · <a href="/articles/ya-obyazatelno-prosnus-soboy-simvolizm/">Русская версия</a></p>
+<p class="art-nav"><a href="/articles/i-will-wake-up-as-myself/">← To the film: both episodes</a> · <a href="/articles/i-will-wake-up-as-myself-text/">Text of episode one</a> · <a href="/articles/i-will-wake-up-as-myself-text-2/">Text of episode two</a> · <a href="/articles/ya-obyazatelno-prosnus-soboy-simvolizm/">Русская версия</a></p>
