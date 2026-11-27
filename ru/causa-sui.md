@@ -74,6 +74,13 @@ translation_label: "English version"
 
 В любом случае вопрос переходит из области мнений в область проверки. В этом и состоит проект.
 
+## Фильм
+
+Идеи проекта рассказаны и в виде истории — в фильме из двух серий «Я обязательно проснусь собой». Клэр, молодая программистка с Кей Веста, собирает цифрового двойника погибшего отца из его сообщений и голосовых, а потом начинает каждый день записывать себя, чтобы однажды проснуться снова. Фильм задаёт тот же вопрос, на который отвечает проект: остаётся ли идеальная копия человека этим человеком?
+
+- [Серия 1 на YouTube](https://youtu.be/mzRmvsBZ1sg) · [Серия 2 на YouTube](https://youtu.be/abJcdbjzVqg)
+- [Страница фильма](/articles/ya-obyazatelno-prosnus-soboy/) — обе серии, полный текст и статья о символизме
+
 ## Где прочитать подробнее
 
 Книги на Литрес:
@@ -96,3 +103,7 @@ translation_label: "English version"
 *Книги написаны в соавторстве с ИИ Claude (Anthropic): рутинную часть работы — сверку, расчёты, программу, многократную переработку текста — выполнял он. Теория, её постулаты и решения — авторские.*
 
 Игорь Шаханов
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "CreativeWorkSeries", "name": "Project Causa Sui", "description": "Теория возникновения субъектности: книги, препринты, условный мир и фильм в двух сериях.", "url": "https://igorch1955.github.io/ru/causa-sui/", "inLanguage": "ru", "author": {"@type": "Person", "name": "Igor Shakhanov", "url": "https://igorch1955.github.io/"}, "hasPart": [{"@type": "Book", "name": "Project Causa Sui: A Theory of the Origin of Subjecthood", "author": {"@type": "Person", "name": "Igor Shakhanov", "url": "https://igorch1955.github.io/"}, "url": "https://www.amazon.com/dp/B0HBQB7JC4"}, {"@type": "Book", "name": "Project Causa Sui: A Foundation for Transhumanism", "author": {"@type": "Person", "name": "Igor Shakhanov", "url": "https://igorch1955.github.io/"}, "url": "https://www.amazon.com/dp/B0H6M6G5VG", "sameAs": "https://doi.org/10.5281/zenodo.21641230"}, {"@type": "Book", "name": "Project Causa Sui: Paths of Implementation", "author": {"@type": "Person", "name": "Igor Shakhanov", "url": "https://igorch1955.github.io/"}, "url": "https://www.amazon.com/dp/B0HN52WR86"}, {"@type": "Movie", "name": "Я обязательно проснусь собой", "alternateName": "I Will Wake Up as Myself", "url": "https://igorch1955.github.io/articles/ya-obyazatelno-prosnus-soboy/", "sameAs": ["https://youtu.be/mzRmvsBZ1sg", "https://youtu.be/abJcdbjzVqg", "https://www.youtube.com/@IgorShakhanovFilm"], "dateCreated": "2026-11", "inLanguage": "ru", "author": {"@type": "Person", "name": "Igor Shakhanov", "url": "https://igorch1955.github.io/"}, "director": {"@type": "Person", "name": "Igor Shakhanov", "url": "https://igorch1955.github.io/"}, "isBasedOn": {"@type": "Book", "name": "Project Causa Sui: A Foundation for Transhumanism", "author": {"@type": "Person", "name": "Igor Shakhanov", "url": "https://igorch1955.github.io/"}, "url": "https://www.amazon.com/dp/B0H6M6G5VG", "sameAs": "https://doi.org/10.5281/zenodo.21641230"}, "about": ["transhumanism", "mind uploading", "digital immortality", "personal identity"]}]}
+</script>
